@@ -18,7 +18,7 @@
             <div class="grid max-w-full items-center justify-center gap-2">
                 <img class="h-auto w-20" src="{{ asset('landing/images/logo-kabgor.png') }}" alt="Logo">
             </div>
-            <div class="text-center text-3xl text-white">Desa Bumela</div>
+            <div class="text-center text-3xl text-white">Desa Katialada</div>
         </div>
 
         <ul class="space-y-2 font-medium">
