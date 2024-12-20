@@ -2,13 +2,13 @@
     {{-- data --}}
 
     <div data-aos="zoom-in" class="mt-28 text-center">
-        <h1 class="text-darken text-2xl font-semibold ">Data Desa <span class="text-gray-600">Bumela</span></h1>
-        <p class="text-gray-500 my-5 lg:px-96">kami juga menyajikan data lengkap tentang Desa Bumela, mencakup
+        <h1 class="text-darken text-2xl font-semibold ">Data Desa <span class="text-gray-600">Katialada</span></h1>
+        <p class="text-gray-500 my-5 lg:px-96">kami juga menyajikan data lengkap tentang Desa Katialada, mencakup
             berbagai
             aspek penting seperti jumlah penduduk, luas wilayah, serta informasi administratif lainnya. Data ini kami
             tampilkan untuk memberikan gambaran yang jelas tentang kondisi dan potensi desa kami. Kami berharap
             informasi ini dapat menjadi acuan dalam perencanaan pembangunan dan pengambilan keputusan yang lebih baik
-            untuk masa depan Desa Bumela.
+            untuk masa depan Desa Katialada.
         </p>
     </div>
 
@@ -17,7 +17,7 @@
             <div id="data-penduduk">
             </div>
             <div class="p-5">
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Jumlah penduduk Desa Bumela memberikan
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Jumlah penduduk Desa Katialada memberikan
                     gambaran tentang potensi sumber daya manusia yang dapat dioptimalkan untuk pembangunan desa. Kami
                     menyediakan informasi terbaru dan akurat mengenai demografi penduduk.
                 </p>
@@ -28,7 +28,7 @@
             <div id="data-transportasi">
             </div>
             <div class="p-5">
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Infrastruktur transportasi di Desa Bumela
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Infrastruktur transportasi di Desa Katialada
                     memainkan peran penting dalam mendukung mobilitas masyarakat dan perekonomian desa. Informasi ini
                     mencakup ketersediaan sarana transportasi serta aksesibilitas desa.
                 </p>
@@ -39,7 +39,7 @@
             <div id="data-peternakan">
             </div>
             <div class="p-5">
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Peternakan di Desa Bumela mencerminkan
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Peternakan di Desa Katialada mencerminkan
                     potensi ekonomi yang kuat, dengan data mengenai jenis hewan ternak yang dikelola oleh warga desa.
                     Informasi ini penting untuk mendukung pengembangan sektor pertanian dan peternakan.
                 </p>
@@ -51,7 +51,7 @@
             <div id="gender-chart">
             </div>
             <div class="p-5">
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Peternakan di Desa Bumela mencerminkan
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Peternakan di Desa Katialada mencerminkan
                     potensi ekonomi yang kuat, dengan data mengenai jenis hewan ternak yang dikelola oleh warga desa.
                     Informasi ini penting untuk mendukung pengembangan sektor pertanian dan peternakan.
                 </p>
@@ -63,7 +63,7 @@
             <div id="status-chart">
             </div>
             <div class="p-5">
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Peternakan di Desa Bumela mencerminkan
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Peternakan di Desa Katialada mencerminkan
                     potensi ekonomi yang kuat, dengan data mengenai jenis hewan ternak yang dikelola oleh warga desa.
                     Informasi ini penting untuk mendukung pengembangan sektor pertanian dan peternakan.
                 </p>
@@ -90,7 +90,7 @@
             </div>
             <div class="p-5">
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Data mengenai kondisi rumah tangga di Desa
-                    Bumela memberikan gambaran mengenai taraf hidup masyarakat dan kualitas infrastruktur perumahan
+                    Katialada memberikan gambaran mengenai taraf hidup masyarakat dan kualitas infrastruktur perumahan
                     yang tersedia</p>
             </div>
         </div>

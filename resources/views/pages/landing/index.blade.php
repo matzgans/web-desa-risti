@@ -12,16 +12,16 @@
                     <div class="w-full md:w-1/2 p-4 md:p-8 bg-gray-200/50">
                         <h1
                             class="mb-4 text-2xl  font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-6xl">
-                            Selamat Datang Di Website Resmi Desa Bumela
+                            Selamat Datang Di Website Resmi Desa Katialada
                         </h1>
                         <p class="mb-6 text-sm md:text-lg font-normal text-black lg:text-xl text-justify">
-                            website Desa Bumela dirancang sebagai pintu gerbang informasi utama yang menyajikan gambaran
+                            website Desa Katialada dirancang sebagai pintu gerbang informasi utama yang menyajikan gambaran
                             lengkap tentang desa. Halaman ini menampilkan informasi profil desa, potensi unggulan,
                             berita terkini, layanan digital bagi masyarakat, serta agenda kegiatan desa. Dengan desain
                             yang ramah pengguna, landing page ini dilengkapi menu navigasi intuitif untuk mempermudah
                             akses ke fitur-fitur penting, seperti layanan administrasi online, pengumuman resmi, hingga
                             promosi produk UMKM lokal. Melalui halaman ini, pengunjung dapat merasakan transparansi,
-                            inovasi, dan semangat pemberdayaan yang menjadi ciri khas Desa Bumela.
+                            inovasi, dan semangat pemberdayaan yang menjadi ciri khas Desa Katialada.
                         </p>
                         <a href="/profiles"
                             class="inline-flex items-center justify-center px-4 py-2 md:px-5 md:py-3 text-sm md:text-base font-medium text-center text-white bg-black rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
@@ -126,11 +126,11 @@
 
                 <!-- Welcome Text -->
                 <div class="text-gray-700 leading-relaxed text-lg text-justify">
-                    Selamat datang di Website resmi Pemerintah Desa Bumela kecamatan Bilato, Kabupaten Gorontalo,
+                    Selamat datang di Website resmi Pemerintah Desa Katialada kecamatan Bilato, Kabupaten Gorontalo,
                     Gorontalo, Indonesia. Ini adalah ruang media informasi desa sebagai sarana
                     komunikasi dan keterbukaan informasi publik. Jangan lupa selalu ikuti website dan
                     media sosial kami untuk update informasi dalam penyelenggaran pemerintahan di Desa
-                    Bumela. Terima kasih sudah mengunjungi website kami. Semoga bermanfaat, kritik dan
+                    Katialada. Terima kasih sudah mengunjungi website kami. Semoga bermanfaat, kritik dan
                     saran selalu kami harapkan untuk desa yang lebih baik.
                 </div>
 
@@ -139,7 +139,7 @@
                     @foreach ($currentVillageHead as $head)
                         <div class="text-2xl font-script text-gray-800"> {{ $head->staff_name }}
                         </div>
-                        <div class="text-sm font-semibold uppercase tracking-wider text-gray-600">KEPALA DESA Bumela
+                        <div class="text-sm font-semibold uppercase tracking-wider text-gray-600">KEPALA DESA Katialada
                         </div>
                     @endforeach
                 </div>
@@ -151,16 +151,16 @@
 
     <div class="pt-5 pb-20 px-20 bg-black">
         <div data-aos="zoom-in" class="mt-16 text-center">
-            <h1 class="text-darken text-2xl font-semibold text-white">Data Desa <span class="text-white">Wait mo tanya dulu nama desa</span>
+            <h1 class="text-darken text-2xl font-semibold text-white">Data Desa <span class="text-white">Katialada</span>
             </h1>
-            <p class="text-gray-100 my-5 lg:px-96">kami juga menyajikan data lengkap tentang Desa Bumela, mencakup
+            <p class="text-gray-100 my-5 lg:px-96">kami juga menyajikan data lengkap tentang Desa Katialada, mencakup
                 berbagai
                 aspek penting seperti jumlah penduduk, luas wilayah, serta informasi administratif lainnya. Data ini
                 kami
                 tampilkan untuk memberikan gambaran yang jelas tentang kondisi dan potensi desa kami. Kami berharap
                 informasi ini dapat menjadi acuan dalam perencanaan pembangunan dan pengambilan keputusan yang lebih
                 baik
-                untuk masa depan Desa Bumela.
+                untuk masa depan Desa Katialada.
             </p>
         </div>
         <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4 mx-10">
@@ -266,7 +266,7 @@
     <div data-aos="zoom-in" class="mt-16 text-center">
         <h1 class="text-darken text-2xl font-semibold">SOTK</h1>
         <p class="text-gray-500 my-5 lg:px-96">
-            Struktur Organisasi dan Tata Kerja Pemerintah Desa Bumela kecamatan Bilato, Kabupaten Gorontalo, Gorontalo,
+            Struktur Organisasi dan Tata Kerja Pemerintah Desa Katialada kecamatan Bilato, Kabupaten Gorontalo, Gorontalo,
             Indonesia Provinsi Jawa Tengah
         </p>
 
@@ -313,9 +313,9 @@
             <h1 class="text-darken text-2xl font-semibold ">Artikel</h1>
             <p class="text-gray-500 my-5 lg:px-96 text-justify">kami juga menyajikan artikel-artikel informatif tentang
                 Desa
-                Bumela, yang menggambarkan berbagai aspek kehidupan, sejarah, dan perkembangan desa. Artikel ini
+                Katialada, yang menggambarkan berbagai aspek kehidupan, sejarah, dan perkembangan desa. Artikel ini
                 diharapkan dapat memberikan wawasan lebih dalam tentang potensi dan keunikan desa kami. Mari
-                bersama-sama mengenal lebih dekat Desa Bumela dan terus mendukung upaya pembangunan yang berkelanjutan.
+                bersama-sama mengenal lebih dekat Desa Katialada dan terus mendukung upaya pembangunan yang berkelanjutan.
             </p>
         </div>
     @endif
@@ -415,10 +415,10 @@
 
 
     <div class="mt-16 text-center" data-aos="zoom-in">
-        <h1 class="text-darken text-2xl font-semibold">Galery Desa <span class="text-black">Bumela</span></h1>
+        <h1 class="text-darken text-2xl font-semibold">Galery Desa <span class="text-black">Katialada</span></h1>
         <p class="my-5 text-gray-500 lg:px-96">Galeri ini juga menampilkan momen-momen penting, seperti tradisi budaya,
             aktivitas masyarakat, dan pemandangan desa yang memikat. Jelajahi lebih dalam dan temukan keunikan Desa
-            Bumela yang tak terlupakan!
+            Katialada yang tak terlupakan!
         </p>
     </div>
 
@@ -490,19 +490,16 @@
 
     {{-- lokasi --}}
     <div class="mt-16 text-center" data-aos="zoom-in">
-        <h1 class="text-darken text-2xl font-semibold">Lokasi Desa <span class="text-black">Bumela</span></h1>
-        <p class="my-5 text-gray-500 lg:px-96">lokasi strategis Desa Bumela yang terletak di Kecamatan Bonepantai,
+        <h1 class="text-darken text-2xl font-semibold">Lokasi Desa <span class="text-black">Katialada</span></h1>
+        <p class="my-5 text-gray-500 lg:px-96">lokasi strategis Desa Katialada yang terletak di Kecamatan Bonepantai,
             Kabupaten Bone Bolango. Lokasi ini memberikan potensi besar dalam pengembangan ekonomi dan pariwisata desa.
             Kami berharap informasi ini memudahkan masyarakat maupun pengunjung untuk lebih mengenal dan menjelajahi
-            keindahan alam serta keunikan budaya Desa Bumela. Mari bersama-sama menjadikan desa ini sebagai destinasi
+            keindahan alam serta keunikan budaya Desa Katialada. Mari bersama-sama menjadikan desa ini sebagai destinasi
             yang menarik dan berdaya saing.
         </p>
     </div>
 
     <div class="flex justify-center">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17184.34498357636!2d122.64518079438012!3d0.6075734467445825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x327919a38ef11033%3A0xc2b671aa1ef3b962!2sBumela%2C%20Kec.%20Boliyohuto%2C%20Kabupaten%20Gorontalo%2C%20Gorontalo!5e1!3m2!1sid!2sid!4v1730382683393!5m2!1sid!2sid"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.759985569857!2d122.90087848780126!3d0.8493064735045458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32794f76be888f7f%3A0x1a3123d14411b3b2!2sKantor%20Desa%20Katialada!5e0!3m2!1sen!2sid!4v1734709360554!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </x-landing-layout>

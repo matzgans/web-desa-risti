@@ -1,13 +1,13 @@
 <x-landing-layout>
     <div data-aos="zoom-in" class="mt-28 text-center">
-        <h1 class="text-darken text-2xl font-semibold">Artikel Desa <span class="text-black">Bumela</span>
+        <h1 class="text-darken text-2xl font-semibold">Artikel Desa <span class="text-black">Katialada</span>
         </h1>
         <p class="text-gray-500 my-5 lg:px-96">Kami percaya bahwa informasi adalah kunci untuk memahami dan memberdayakan
             masyarakat. Oleh karena itu, kami mengajak Anda untuk membaca dan mengeksplorasi setiap artikel, yang
             mencakup topik-topik penting, kegiatan sosial, serta inisiatif pembangunan yang sedang berjalan. Dengan
             pengetahuan yang diperoleh, kami berharap Anda dapat turut serta dalam mewujudkan desa yang lebih baik.
 
-            Mari bergabung dalam perjalanan ini dan temukan lebih banyak tentang Desa Bumela melalui artikel-artikel
+            Mari bergabung dalam perjalanan ini dan temukan lebih banyak tentang Desa Katialada melalui artikel-artikel
             yang kami sajikan</p>
         <div class="flex flex-wrap justify-center lg:mx-52 gap-4" id="article-list">
             @foreach ($articles as $article)
