@@ -151,7 +151,7 @@
 
     <div class="pt-5 pb-20 px-20 bg-black">
         <div data-aos="zoom-in" class="mt-16 text-center">
-            <h1 class="text-darken text-2xl font-semibold text-white">Data Desa <span class="text-white">Bumela</span>
+            <h1 class="text-darken text-2xl font-semibold text-white">Data Desa <span class="text-white">Wait mo tanya dulu nama desa</span>
             </h1>
             <p class="text-gray-100 my-5 lg:px-96">kami juga menyajikan data lengkap tentang Desa Bumela, mencakup
                 berbagai
