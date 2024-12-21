@@ -116,8 +116,8 @@
             </div>
             <h2>Pemerintah Kabupaten Bonebolango</h2>
             <h2>Kecamatan Kabila Bone</h2>
-            <h2>Desa Bumela</h2>
-            <p>Jalan Trans Sulawesi No. 01 Desa Bumela Kecamatan Bonepantai, Kode Pos 96585</p>
+            <h2>Desa Katialada</h2>
+            <p>Jalan Trans Sulawesi No. 01 Desa Katialada Kecamatan Bonepantai, Kode Pos 96585</p>
         </div>
         <hr>
         <div class="content">
@@ -140,7 +140,7 @@
                     <tr>
                         <td>Alamat</td>
                         <td>:</td>
-                        <td>Desa Bumela Kec. Bonepantai</td>
+                        <td>Desa Katialada Kec. Bonepantai</td>
                     </tr>
                 </table>
             </div>
@@ -205,7 +205,7 @@
                         <tr>
                             <td>Dikeluarkan di</td>
                             <td>:</td>
-                            <td>Bumela</td>
+                            <td>Katialada</td>
                         </tr>
                         <tr>
                             <td>Pada Tanggal</td>
@@ -215,7 +215,7 @@
                     </table>
 
                     <div class="text-table">
-                        <p class="kepala-desa" style="margin-bottom: 65px">Kepala Desa Bumela</p>
+                        <p class="kepala-desa" style="margin-bottom: 65px">Kepala Desa Katialada</p>
                         <p class="nama-kepala-desa" style="margin-bottom: 0px">MARTEN H. SALEH</p>
                         <p>NIP : 19791209 201001 1 003</p>
                     </div>

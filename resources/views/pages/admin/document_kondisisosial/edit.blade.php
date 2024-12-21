@@ -78,7 +78,7 @@
                         <label class="block text-sm font-medium text-gray-700">Alamat:</label>
                         <input class="mt-1 w-full rounded-md border p-2 text-gray-900 focus:ring focus:ring-blue-500"
                             name="address" type="text" value="{{ $data['address'] }}" required
-                            placeholder="Desa Bumela, Kecamatan Bilato, Kabupaten Gorontalo" />
+                            placeholder="Desa Katialada, Kecamatan Bilato, Kabupaten Gorontalo" />
                     </div>
 
                     <h2 class="mb-4 text-lg font-semibold">Orang Tua/Wali dari Calon Mahasiswa Baru:</h2>

@@ -121,8 +121,8 @@
             <div class="header-text">
                 <h2>Pemerintah Kabupaten Gorontalo</h2>
                 <h2>Kecamatan Bilato</h2>
-                <h2>Desa Bumela</h2>
-                <p>Jalan Trans Sulawesi No. 01 Desa Bumela Kecamatan Bilato, Kode Pos 96585</p>
+                <h2>Desa Katialada</h2>
+                <p>Jalan Trans Sulawesi No. 01 Desa Katialada Kecamatan Bilato, Kode Pos 96585</p>
             </div>
         </div>
         <hr>
@@ -148,7 +148,7 @@
                     <tr>
                         <td style="padding-right: 50px">Alamat</td>
                         <td>:</td>
-                        <td>Desa Bumela Kecamatan Bilato
+                        <td>Desa Katialada Kecamatan Bilato
                             Kab.Gorontalo
                         </td>
                     </tr>
@@ -241,7 +241,7 @@
                         <tr>
                             <td>Dikeluarkan di</td>
                             <td>:</td>
-                            <td>Bumela</td>
+                            <td>Katialada</td>
                         </tr>
                         <tr>
                             <td>Pada Tanggal</td>
@@ -251,7 +251,7 @@
                     </table>
 
                     <div class="text-table">
-                        <p class="kepala-desa">Kepala Desa Bumela</p>
+                        <p class="kepala-desa">Kepala Desa Katialada</p>
                         <p class="nama-kepala-desa">{{ ucfirst($kepala_desa) }}</p>
                         <p class="nip">NIP : 19791209 201001 1 003</p>
                     </div>
