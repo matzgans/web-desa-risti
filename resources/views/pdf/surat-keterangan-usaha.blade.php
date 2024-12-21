@@ -146,7 +146,7 @@
                     <tr>
                         <td style="padding-right: 50px">Alamat</td>
                         <td>:</td>
-                        <td>Desa Uabanga Kec. Bonepantai </td>
+                        <td>Desa Katialada Kec. Bonepantai </td>
                     </tr>
 
                 </table>

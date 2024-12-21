@@ -15,8 +15,8 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: "#387478",
-                secondary: "#243642",
+                primary: "#922a2a",
+                secondary: "#DE7C7D",
             },
             keyframes: {
                 zoomInOut: {
