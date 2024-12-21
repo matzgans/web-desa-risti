@@ -258,6 +258,19 @@
                 </x-nav-link>
             </li>
 
+            <li>
+                <x-nav-link :href="route('admin.admin.theme.index')" :active="request()->routeIs('admin.admin.theme.*')">
+                    <svg class="{{ request()->routeIs('admin.admin.theme.*') ? 'h-5 w-5 text-secondary' : 'h-5 w-5 text-white' }} transition duration-75 group-hover:text-secondary dark:text-white dark:group-hover:text-secondary"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16v12H4z" />
+                    </svg>
+                    <span class="ms-3">Tema</span>
+                </x-nav-link>
+            </li>
+            
+
             <li class="md:hidden">
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

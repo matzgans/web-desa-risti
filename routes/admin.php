@@ -206,6 +206,17 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('visionmision', VisionMisionController::class);
     Route::resource('villageprogram', VillageProgramController::class);
 
+    // Tema
+    Route::resource('theme', \App\Http\Controllers\Admin\ThemeController::class)->names([
+        'index'   => 'theme.index',
+        'create'  => 'theme.create',
+        'store'   => 'theme.store',
+        'show'    => 'theme.show',
+        'edit'    => 'theme.edit',
+        'update'  => 'theme.update',
+        'destroy' => 'theme.destroy',
+    ]);
+
     // end data master
     Route::get('export/resident', [ResidentController::class, 'export'])->name('export.resident');
     Route::get('export/template/resident', [ResidentController::class, 'export_template'])->name('export.template.resident');
