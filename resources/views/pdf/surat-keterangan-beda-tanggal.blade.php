@@ -136,7 +136,7 @@
                     <tr>
                         <td style="padding-right: 50px">Alamat</td>
                         <td>:</td>
-                        <td>Desa Bumela Kecamatan Bilato
+                        <td>Desa Katialada Kecamatan Bilato
                             Kab.Gorontalo
                         </td>
                     </tr>
@@ -160,7 +160,7 @@
                     <tr>
                         <td>Dikeluarkan di</td>
                         <td>:</td>
-                        <td>Bumela</td>
+                        <td>Katialada</td>
                     </tr>
                     <tr>
                         <td>Pada Tanggal</td>
@@ -169,7 +169,7 @@
                     </tr>
                 </table>
                 <div class="text-table">
-                    <p class="kepala-desa">Kepala Desa Bumela</p>
+                    <p class="kepala-desa">Kepala Desa Katialada</p>
                     <p class="nama-kepala-desa">{{ ucfirst($kepala_desa) }}</p>
                     <p class="nip">NIP : 19791209 201001 1 003</p>
                 </div>
