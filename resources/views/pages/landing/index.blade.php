@@ -105,7 +105,7 @@
         <div class="mx-auto max-w-4xl">
             <h1 class="mb-3 text-center font-medium text-gray-400">Bekerja Sama Dengan</h1>
             <div class="flex justify-center gap-20 overflow-auto pt-10">
-                <img class="h-32" src="{{ asset('landing/images/logo-kabgor.png') }}">
+                <img class="h-32" src="{{ asset('landing/images/logo-gorut.png') }}">
             </div>
         </div>
     </div>

@@ -86,7 +86,7 @@
                 </div>
                 <div class="relative mt-10 sm:mt-0 sm:w-1/2" data-aos="fade-right">
                     <img class="lg:size-6/12 relative z-40 rounded-xl"
-                        src="{{ asset('landing/images/logo-kabgor.png') }}" alt="">
+                        src="{{ asset('landing/images/logo-gorut.png') }}" alt="">
                 </div>
             </div>
         @else
@@ -100,7 +100,7 @@
                 </div>
                 <div class="relative mt-10 sm:mt-0 sm:w-1/2" data-aos="fade-right">
                     <img class="lg:size-6/12 relative z-40 rounded-xl"
-                        src="{{ asset('landing/images/logo-kabgor.png') }}" alt="">
+                        src="{{ asset('landing/images/logo-gorut.png') }}" alt="">
                 </div>
             </div>
         @endif
