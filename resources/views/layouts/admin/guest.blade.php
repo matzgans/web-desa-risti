@@ -22,7 +22,7 @@
         <div class="flex w-1/2 items-center justify-center bg-black p-8 text-white max-md:hidden">
             <div class="text-center">
                 <h1 class="text-7xl font-bold">Selamat Datang Di Website Resmi Desa <span class="text-gray-600">
-                        Bumela</span></h1>
+                        Katialada</span></h1>
             </div>
         </div>
 

@@ -10,7 +10,7 @@
                         stroke="#26C1F2" stroke-width="2" />
                 </svg>
             </div>
-            <span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">Desa Bumela</span>
+            <span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">Desa Katialada</span>
         </div>
 
         <div class="text-center text-white">

@@ -1,8 +1,8 @@
 <x-landing-layout>
     <!-- Profile. -->
     <div data-aos="zoom-in" class="mt-28 text-center">
-        <h1 class="text-darken text-2xl font-semibold">Sejarah Desa <span class="text-gray-500">Bumela</span></h1>
-        <p class="text-gray-500 my-5 lg:px-96 text-justify">Menurut perkiraan para Panggoba Desa Bumela dibuka tahun
+        <h1 class="text-darken text-2xl font-semibold">Sejarah Desa <span class="text-gray-500">Katialada</span></h1>
+        <p class="text-gray-500 my-5 lg:px-96 text-justify">Menurut perkiraan para Panggoba Desa Katialada dibuka tahun
             1918. Saat itu
             masih hutan belukar yang belum bernama, saat itu pula ada sekelmpok masyarakat yang menjelajahi hutan
             tersebut, mereka berencana untuk membuka hutan belukar tersebut. Setelah melakukan diskusi dalam hal ini
@@ -26,8 +26,8 @@
             Dalam
             diskusi tersebut berbagai macam usulan pendapat yang muncul, namun dari semua usulan tersebut terdapat satu
             usulan nama Desa yang berhubungan dengan nama-nama kayu yang ditemui selama penjelajahan yaitu WABANGA. Nama
-            WABANGA tersebut kemudian masih diproses melalui pertemuan-pertemuan, sehingga menjadi Bumela, dan tepatnya
-            pada tanggal 27 JULI 1918 dilaksanakan pertemuan secara umum tentang Pengesahan nama Desa yaitu DESA Bumela
+            WABANGA tersebut kemudian masih diproses melalui pertemuan-pertemuan, sehingga menjadi Katialada, dan tepatnya
+            pada tanggal 27 JULI 1918 dilaksanakan pertemuan secara umum tentang Pengesahan nama Desa yaitu DESA Katialada
             sekaligus Penobatan Kepala Desa pertama yaitu yang bernama ISHAK
         </p>
     </div>
@@ -35,10 +35,10 @@
     <!-- Visi Misi. -->
     <div data-aos="flip-up" class="max-w-xl mx-auto text-center mt-24" id="visi-misi">
         <h1 class="font-bold text-darken my-3 text-2xl text-yellow-500">Visi Misi Desa <span
-                class="text-gray-500">Bumela</span>
+                class="text-gray-500">Katialada</span>
         </h1>
         <p class="leading-relaxed text-gray-500">Melalui platform ini, kami juga menyampaikan visi dan misi Desa
-            Bumela, yang menjadi landasan utama dalam setiap langkah pembangunan dan pemberdayaan masyarakat. Mari
+            Katialada, yang menjadi landasan utama dalam setiap langkah pembangunan dan pemberdayaan masyarakat. Mari
             bersama-sama mewujudkan desa yang mandiri, maju, dan sejahtera.
         </p>
     </div>
@@ -66,10 +66,10 @@
     <!-- Program Unggulan. -->
     <div data-aos="flip-up" class="max-w-xl mx-auto text-center mt-24 " id="program-unggulan">
         <h1 class="font-bold text-darken my-3 text-2xl text-yellow-500">Program Unggulan Desa <span
-                class="text-gray-500">Bumela</span>
+                class="text-gray-500">Katialada</span>
         </h1>
         <p class="leading-relaxed text-gray-500">Melalui platform ini, kami juga menyampaikan program unggulan Desa
-            Bumela, yang menjadi fokus utama dalam meningkatkan kesejahteraan dan kualitas hidup masyarakat.
+            Katialada, yang menjadi fokus utama dalam meningkatkan kesejahteraan dan kualitas hidup masyarakat.
             Program-program ini dirancang untuk mengoptimalkan potensi desa dan mendorong pembangunan yang
             berkelanjutan. Bersama-sama, mari kita wujudkan desa yang tangguh, inovatif, dan berdaya saing.</p>
     </div>
@@ -107,7 +107,7 @@
     @endforeach
 
     {{-- <div data-aos="zoom-in" class="mt-16 text-center">
-        <h1 class="text-darken text-2xl font-semibold mb-5">Struktur Desa <span class="text-gray-500">Bumela</span></h1>
+        <h1 class="text-darken text-2xl font-semibold mb-5">Struktur Desa <span class="text-gray-500">Katialada</span></h1>
         <div class=" flex  justify-center">
             <img src="{{ asset('landing/images/struktur-desa.webp') }}" alt="struktur-desa" loading="lazy"
                 class="px-20" width="1000">
@@ -115,14 +115,14 @@
     </div> --}}
 
     <div data-aos="zoom-in" class="mt-16 text-center">
-        <h1 class="text-darken text-2xl font-semibold">Aparat Pemerintah Desa <span class="text-gray-500">Bumela</span>
+        <h1 class="text-darken text-2xl font-semibold">Aparat Pemerintah Desa <span class="text-gray-500">Katialada</span>
         </h1>
-        <p class="text-gray-500 my-5 lg:px-96">Aparat Pemerintah Desa Bumela terdiri dari individu-individu yang
+        <p class="text-gray-500 my-5 lg:px-96">Aparat Pemerintah Desa Katialada terdiri dari individu-individu yang
             berdedikasi dan berkomitmen untuk meningkatkan kesejahteraan masyarakat. Dengan berlandaskan pada prinsip
             transparansi dan akuntabilitas, mereka bekerja sama dalam merencanakan, melaksanakan, dan mengevaluasi
             berbagai program pembangunan yang berfokus pada pemberdayaan masyarakat. Tim ini berkomitmen untuk menjalin
             komunikasi yang baik dengan warga, mendengarkan aspirasi, serta memberikan solusi yang tepat guna. Mari kita
-            dukung setiap langkah dan upaya mereka untuk menjadikan Desa Bumela lebih maju dan sejahtera.
+            dukung setiap langkah dan upaya mereka untuk menjadikan Desa Katialada lebih maju dan sejahtera.
         </p>
 
         <div class="flex flex-wrap justify-center gap-4">
@@ -171,8 +171,8 @@
 
 
     <div data-aos="zoom-in" class="mt-16 text-center">
-        <h1 class="text-darken text-2xl font-semibold">Daftar Kepala Desa <span class="text-gray-500">Bumela</span></h1>
-        <p class="text-gray-500 my-5 lg:px-96">Di bawah kepemimpinan yang visioner, Desa Bumela dipimpin oleh kepala
+        <h1 class="text-darken text-2xl font-semibold">Daftar Kepala Desa <span class="text-gray-500">Katialada</span></h1>
+        <p class="text-gray-500 my-5 lg:px-96">Di bawah kepemimpinan yang visioner, Desa Katialada dipimpin oleh kepala
             desa yang berkomitmen untuk membawa perubahan dan kemajuan. Berikut adalah daftar kepala desa yang telah
             memimpin desa kami:</p>
 
