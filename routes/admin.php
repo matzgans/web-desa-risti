@@ -1,40 +1,42 @@
 <?php
 
-use App\Http\Controllers\ArticleController as LandingArticleController;
-use App\Http\Controllers\LandingController;
-use App\Http\Controllers\Admin\ArticleController;
-use App\Http\Controllers\Admin\ComunicationDeviceController;
-use App\Http\Controllers\Admin\ComunityEconomyController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\DocumentBedaNamaController;
-use App\Http\Controllers\Admin\DocumentDomisiliController;
-use App\Http\Controllers\Admin\DocumentBedaTanggalController;
-use App\Http\Controllers\Admin\DocumentHilangController;
-use App\Http\Controllers\Admin\DocumentKelBaikController;
-use App\Http\Controllers\Admin\DocumentKematianController;
-use App\Http\Controllers\Admin\DocumentKondisiSosialController;
-use App\Http\Controllers\Admin\DocumentLahirController;
-use App\Http\Controllers\Admin\DocumentTidakMampuController;
-use App\Http\Controllers\Admin\DocumentUsahaController;
-use App\Http\Controllers\Admin\EducationLevelController;
-use App\Http\Controllers\Admin\FarmController;
-use App\Http\Controllers\Admin\LivingConditionalController;
-use App\Http\Controllers\Admin\ResidentController;
-use App\Http\Controllers\Admin\StaffCategory;
-use App\Http\Controllers\Admin\StaffCategoryController;
-use App\Http\Controllers\Admin\StructureController;
-use App\Http\Controllers\Admin\SuratController;
-use App\Http\Controllers\Admin\TransportationMeanController;
-use App\Http\Controllers\Admin\VillageController;
-use App\Http\Controllers\Admin\VillageProgramController;
-use App\Http\Controllers\Admin\VisionMisionController;
-use App\Http\Controllers\ProfileController;
-use App\Models\ComunicationDevice;
+use App\Models\VillageProgram;
 use App\Models\ComunityEconomy;
 use App\Models\LivingCondition;
-use App\Models\VillageProgram;
+use App\Models\ComunicationDevice;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\StaffCategory;
+use App\Http\Controllers\Admin\FarmController;
+use App\Http\Controllers\Admin\SuratController;
+use App\Http\Controllers\Admin\ThemeController;
+use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\ContentController;
+use App\Http\Controllers\Admin\VillageController;
+use App\Http\Controllers\Admin\ResidentController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\StructureController;
+use App\Http\Controllers\Admin\VisionMisionController;
+use App\Http\Controllers\Admin\DocumentLahirController;
+use App\Http\Controllers\Admin\DocumentUsahaController;
+use App\Http\Controllers\Admin\StaffCategoryController;
+use App\Http\Controllers\Admin\DocumentHilangController;
+use App\Http\Controllers\Admin\EducationLevelController;
+use App\Http\Controllers\Admin\VillageProgramController;
+use App\Http\Controllers\Admin\ComunityEconomyController;
+use App\Http\Controllers\Admin\DocumentKelBaikController;
+use App\Http\Controllers\Admin\DocumentBedaNamaController;
+use App\Http\Controllers\Admin\DocumentDomisiliController;
+use App\Http\Controllers\Admin\DocumentKematianController;
+use App\Http\Controllers\Admin\LivingConditionalController;
+use App\Http\Controllers\Admin\ComunicationDeviceController;
+use App\Http\Controllers\Admin\DocumentTidakMampuController;
+use App\Http\Controllers\Admin\TransportationMeanController;
+use App\Http\Controllers\Admin\DocumentBedaTanggalController;
+use App\Http\Controllers\Admin\DocumentKondisiSosialController;
+use App\Http\Controllers\ArticleController as LandingArticleController;
 
 Route::get('/', [LandingController::class, 'index'])->name('landing.index');
 Route::get('/profiles', [LandingController::class, 'profile'])->name('landing.profile');
@@ -207,7 +209,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('villageprogram', VillageProgramController::class);
 
     // Tema
-    Route::resource('theme', \App\Http\Controllers\Admin\ThemeController::class)->names([
+    Route::resource('theme', ThemeController::class)->names([
         'index'   => 'theme.index',
         'create'  => 'theme.create',
         'store'   => 'theme.store',
@@ -215,6 +217,17 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
         'edit'    => 'theme.edit',
         'update'  => 'theme.update',
         'destroy' => 'theme.destroy',
+    ]);
+
+    // content
+    Route::resource('content', ContentController::class)->names([
+        'index'   => 'content.index',
+        'create'  => 'content.create',
+        'store'   => 'content.store',
+        'show'    => 'content.show',
+        'edit'    => 'content.edit',
+        'update'  => 'content.update',
+        'destroy' => 'content.destroy',
     ]);
 
     // end data master

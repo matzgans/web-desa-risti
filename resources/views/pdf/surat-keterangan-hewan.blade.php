@@ -112,7 +112,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <img src="../public/landing/images/logo-kabgor.png">
+                <img src="../public/landing/images/logo-gorut.png">
             </div>
             <h2>Pemerintah Kabupaten Bonebolango</h2>
             <h2>Kecamatan Kabila Bone</h2>

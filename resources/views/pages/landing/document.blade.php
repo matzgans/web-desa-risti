@@ -174,11 +174,11 @@
     <div class="mx-20" id="default-tab-content">
         <div class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="ket-default" role="tabpanel"
             aria-labelledby="profile-tab">
-            <p class="text-sm text-gray-500 dark:text-gray-400">Fitur penyuratan di Uabanga dimulai dengan pengguna
+            <p class="text-sm text-gray-500 dark:text-gray-400">Fitur penyuratan di Katialada dimulai dengan pengguna
                 memilih jenis surat yang diinginkan dari daftar tersedia. Setelah itu, pengguna mengisi formulir dengan
                 data yang diminta, sebelum mengirimkan permohonan surat. Setelah proses verifikasi oleh pihak
                 administrasi desa, Pengguna kemudian datang ke kantor administrasi desa untung mengambil surat yang
-                telah diverifikasi oleh admin desa uabanga</p>
+                telah diverifikasi oleh admin desa Katialada</p>
 
         </div>
         <div class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="ket-beda-tanggal" role="tabpanel"

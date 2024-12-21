@@ -105,7 +105,7 @@
         <div class="mx-auto max-w-4xl">
             <h1 class="mb-3 text-center font-medium text-gray-400">Bekerja Sama Dengan</h1>
             <div class="flex justify-center gap-20 overflow-auto pt-10">
-                <img class="h-32" src="{{ asset('landing/images/logo-kabgor.png') }}">
+                <img class="h-32" src="{{ asset('landing/images/logo-gorut.png') }}">
             </div>
         </div>
     </div>
@@ -266,8 +266,7 @@
     <div data-aos="zoom-in" class="mt-16 text-center">
         <h1 class="text-darken text-2xl font-semibold">SOTK</h1>
         <p class="text-gray-500 my-5 lg:px-96">
-            Struktur Organisasi dan Tata Kerja Pemerintah Desa Katialada kecamatan Bilato, Kabupaten Gorontalo, Gorontalo,
-            Indonesia Provinsi Jawa Tengah
+            Struktur Organisasi dan Tata Kerja Pemerintah Desa Katialada  kecamatan Kwandang, Kabupaten Gorontalo Utara, Gorontalo, Indonesia.
         </p>
 
         <!-- Card Wrapper -->

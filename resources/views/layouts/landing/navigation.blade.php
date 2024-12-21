@@ -2,7 +2,7 @@
     <nav class="mx-auto flex max-w-6xl gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-4">
         <div class="relative flex items-center">
             <a href="/">
-                <img src="{{ asset('landing/images/logo-kabgor.png') }}" loading="lazy" style="color:transparent"
+                <img src="{{ asset('landing/images/logo-gorut.png') }}" loading="lazy" style="color:transparent"
                     width="32" height="32">
             </a>
         </div>
