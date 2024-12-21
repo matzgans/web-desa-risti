@@ -8,12 +8,12 @@
                         
                         <div class="mb-4">
                             <label for="sambutan_pertama" class="block">Sambutan Pertama</label>
-                            <input type="text" name="sambutan_pertama" value="{{ old('sambutan_pertama', $content->sambutan_pertama ?? '') }}" class="form-input w-full">
+                            <textarea name="sambutan_pertama" class="form-input w-full">{{ old('sambutan_pertama', $content->sambutan_pertama ?? '') }}</textarea>
                         </div>
                         
                         <div class="mb-4">
                             <label for="sambutan_kedua" class="block">Sambutan Kedua</label>
-                            <input type="text" name="sambutan_kedua" value="{{ old('sambutan_kedua', $content->sambutan_kedua ?? '') }}" class="form-input w-full">
+                            <textarea name="sambutan_kedua" class="form-input w-full">{{ old('sambutan_kedua', $content->sambutan_kedua ?? '') }}</textarea>
                         </div>
                         
                         <div class="mb-4">
