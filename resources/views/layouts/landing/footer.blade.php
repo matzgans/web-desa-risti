@@ -16,7 +16,7 @@
         <div class="text-center text-white">
             <div class="py-3 tracking-wide">
                 {{-- <p>Made By <span class="font-semibold">RISTI UNG</span></p> --}}
-                <p class="font-semibold"> &copy; 2024 - RISTI UNG.</p>
+                <p class="font-semibold"> &copy; 2024 - RISTI UNG</p>
             </div>
         </div>
     </div>
