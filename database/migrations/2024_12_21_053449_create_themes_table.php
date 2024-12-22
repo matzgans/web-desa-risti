@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 return new class extends Migration
 {
     /**
@@ -13,9 +14,8 @@ return new class extends Migration
     {
         Schema::create('themes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->boolean('status')->default(1);
+            $table->string('primary')->default('#800000'); // Set default value as color code
+            $table->string('secondary')->default('#333333'); // Set default value as color code
             $table->timestamps();
         });
     }

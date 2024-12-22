@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\ArticleController as LandingArticleController;
-use App\Http\Controllers\DocumentController;
-use App\Http\Controllers\LandingController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\Admin\ThemeController;
+use App\Http\Controllers\ArticleController as LandingArticleController;
 
 Route::get('/', [LandingController::class, 'index'])->name('landing.index');
 Route::get('/profiles', [LandingController::class, 'profile'])->name('landing.profile');
@@ -15,6 +16,8 @@ Route::get('/articles/{slug}', [LandingArticleController::class, 'getBySlug'])->
 Route::get('/documents', [DocumentController::class, 'index'])->name('documents.index');
 Route::get('/refresh-view', [LandingController::class, 'refreshMView'])->name('refresh.view');
 Route::get('/data', [LandingController::class, 'data'])->name('landing.data');
+
+Route::get('/admin/export-theme', [ThemeController::class, 'exportThemeToJson'])->name('admin.export-theme');
 
 Route::post('/documents', [DocumentController::class, 'store'])->name('document.store');
 

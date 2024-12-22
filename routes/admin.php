@@ -50,6 +50,10 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(
 
 Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
 
+    // Tema
+    Route::get('theme', [ThemeController::class, 'index'])->name('theme.index');
+    Route::post('theme', [ThemeController::class, 'store'])->name('theme.store');
+
     // Route Penyuratan
 
 
