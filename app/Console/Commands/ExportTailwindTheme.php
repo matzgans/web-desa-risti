@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Theme;
 use Illuminate\Console\Command;
+use App\Models\Theme;
 
 class ExportTailwindTheme extends Command
 {

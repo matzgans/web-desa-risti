@@ -13,9 +13,9 @@ class ThemeSeeder extends Seeder
      */
     public function run(): void
     {
-        Theme::create([
-            'primary' => '#800000', // Warna default primary
-            'secondary' => '#333333', // Warna default secondary
-        ]);
+        Theme::updateOrCreate(
+            ['id' => 1],
+            ['primary' => '#8c2626', 'secondary' => '#878787']
+        );
     }
 }
