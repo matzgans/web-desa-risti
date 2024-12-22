@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
-use App\Models\ComunityEconomy;
-use App\Models\EducationLevel;
 use App\Models\Farm;
-use App\Models\LivingCondition;
-use App\Models\MaterializedView;
+use App\Models\Article;
+use App\Models\Content;
+use App\Models\Village;
 use App\Models\Resident;
 use App\Models\Structure;
-use App\Models\TransportationMean;
-use App\Models\Village;
-use App\Models\VillageProgram;
 use App\Models\VisionMision;
 use Illuminate\Http\Request;
+use App\Models\EducationLevel;
+use App\Models\VillageProgram;
+use App\Models\ComunityEconomy;
+use App\Models\LivingCondition;
+use App\Models\MaterializedView;
+use App\Models\TransportationMean;
 use Illuminate\Support\Facades\DB;
 
 class LandingController extends Controller
@@ -44,7 +45,7 @@ class LandingController extends Controller
             "manCount",
             "womanCount",
             "villageCount",
-            "residentCount"
+            "residentCount",
         ));
     }
 
@@ -59,12 +60,15 @@ class LandingController extends Controller
         $visionsMissions = VisionMision::all("visi", "misi");
         $priorityPrograms = VillageProgram::where("program_category", "prioritas")->get();
 
+    
+
         return view("pages.landing.profile", [
             'currentVillageHead' => $currentVillageHead,
             'employees' => $employees,
             'formerVillageHeads' => $formerVillageHeads,
             "visionsMissions" =>  $visionsMissions,
             "priorityPrograms" => $priorityPrograms,
+        
         ]);
     }
 
@@ -180,6 +184,7 @@ class LandingController extends Controller
             ->get();
 
 
+
         return view("pages.landing.data", compact(
             "villages",
             "transportationStats",
@@ -190,7 +195,8 @@ class LandingController extends Controller
             'maleCount',
             'femaleCount',
             'totalResidents',
-            'statusResidents'
+            'statusResidents',
+            
         ));
     }
 

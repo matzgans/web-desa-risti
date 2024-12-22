@@ -2,13 +2,8 @@
     <div class="mt-28 text-center" data-aos="zoom-in">
         <h1 class="text-darken text-2xl font-semibold">Penyuratan Desa <span class="text-gray-600">Katialada</span>
         </h1>
-        <p class="my-5 text-gray-500 lg:px-96">Kami berkomitmen untuk memberikan pelayanan yang transparan dan efisien,
-            agar setiap permohonan dapat diproses dengan baik. Untuk mengajukan permohonan, silakan lengkapi formulir
-            yang tersedia dan sertakan informasi yang diperlukan. Tim kami akan segera menindaklanjuti permohonan Anda.
-
-            Dengan fitur ini, kami berharap dapat meningkatkan aksesibilitas dan kenyamanan bagi warga dalam mendapatkan
-            dokumen yang dibutuhkan. Mari bersama-sama mewujudkan pemerintahan desa yang responsif dan bertanggung
-            jawab.
+        <p class="my-5 text-gray-500 lg:px-96">
+            {{ $content->penyuratan }}
         </p>
     </div>
     @if (session('success'))
