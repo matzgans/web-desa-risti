@@ -27,7 +27,7 @@
                 </div>
 
                 <div>
-                    <button class="mt-4 w-full rounded-lg bg-primary px-3 py-2 text-white hover:bg-secondary"
+                    <button class="mt-4 w-1/4 rounded-lg bg-primary px-3 py-2 text-white hover:bg-secondary"
                         type="submit">
                         Simpan
                     </button>
