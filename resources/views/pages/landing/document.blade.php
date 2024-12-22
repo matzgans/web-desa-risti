@@ -2,13 +2,8 @@
     <div class="mt-28 text-center" data-aos="zoom-in">
         <h1 class="text-darken text-2xl font-semibold">Penyuratan Desa <span class="text-gray-600">Katialada</span>
         </h1>
-        <p class="my-5 text-gray-500 lg:px-96">Kami berkomitmen untuk memberikan pelayanan yang transparan dan efisien,
-            agar setiap permohonan dapat diproses dengan baik. Untuk mengajukan permohonan, silakan lengkapi formulir
-            yang tersedia dan sertakan informasi yang diperlukan. Tim kami akan segera menindaklanjuti permohonan Anda.
-
-            Dengan fitur ini, kami berharap dapat meningkatkan aksesibilitas dan kenyamanan bagi warga dalam mendapatkan
-            dokumen yang dibutuhkan. Mari bersama-sama mewujudkan pemerintahan desa yang responsif dan bertanggung
-            jawab.
+        <p class="my-5 text-gray-500 lg:px-96">
+            {{ $content->penyuratan }}
         </p>
     </div>
     @if (session('success'))
@@ -174,11 +169,11 @@
     <div class="mx-20" id="default-tab-content">
         <div class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="ket-default" role="tabpanel"
             aria-labelledby="profile-tab">
-            <p class="text-sm text-gray-500 dark:text-gray-400">Fitur penyuratan di Uabanga dimulai dengan pengguna
+            <p class="text-sm text-gray-500 dark:text-gray-400">Fitur penyuratan di Katialada dimulai dengan pengguna
                 memilih jenis surat yang diinginkan dari daftar tersedia. Setelah itu, pengguna mengisi formulir dengan
                 data yang diminta, sebelum mengirimkan permohonan surat. Setelah proses verifikasi oleh pihak
                 administrasi desa, Pengguna kemudian datang ke kantor administrasi desa untung mengambil surat yang
-                telah diverifikasi oleh admin desa uabanga</p>
+                telah diverifikasi oleh admin desa Katialada</p>
 
         </div>
         <div class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="ket-beda-tanggal" role="tabpanel"

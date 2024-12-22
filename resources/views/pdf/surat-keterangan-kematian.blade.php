@@ -116,7 +116,7 @@
         <!-- Header Section -->
         <div class="header">
             <div class="logo">
-                <img src="../public/landing/images/logo-kabgor.png" alt="Logo kabgor">
+                <img src="../public/landing/images/logo-gorut.png" alt="Logo kabgor">
             </div>
             <div class="header-text">
                 <h2>Pemerintah Kabupaten Gorontalo</h2>

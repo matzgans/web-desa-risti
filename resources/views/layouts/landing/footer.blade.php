@@ -1,6 +1,6 @@
 <footer class="mt-32 bg-black">
     <div class="max-w-lg mx-auto">
-        <div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
+        <div class="flex py-5 justify-center text-white items-center px-20 sm:px-36">
             <div class="relative">
                 <h1 class="font-bold text-xl pr-5 relative z-50">2024</h1>
                 <svg class="w-11 h-11 absolute -top-2 -left-3 z-40" viewBox="0 0 79 79" fill="none"
@@ -15,9 +15,8 @@
 
         <div class="text-center text-white">
             <div class="py-3 tracking-wide">
-                <p>Made By <span class="font-semibold">Gorontalo Software House</span></p>
-                <p>UI/UX By <span class="font-semibold">Irvan Moses</span></p>
-                <p class="font-semibold"> &copy; 2024 Gorontalo Software House.</p>
+                {{-- <p>Made By <span class="font-semibold">RISTI UNG</span></p> --}}
+                <p class="font-semibold"> &copy; 2024 - RISTI UNG.</p>
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 
-    <link rel="icon" href="{{ asset('landing/images/logo-kabgor.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('landing/images/logo-gorut.png') }}" type="image/png">
 
 
     <!-- Scripts -->

@@ -3,12 +3,8 @@
 
     <div data-aos="zoom-in" class="mt-28 text-center">
         <h1 class="text-darken text-2xl font-semibold ">Data Desa <span class="text-gray-600">Katialada</span></h1>
-        <p class="text-gray-500 my-5 lg:px-96">kami juga menyajikan data lengkap tentang Desa Katialada, mencakup
-            berbagai
-            aspek penting seperti jumlah penduduk, luas wilayah, serta informasi administratif lainnya. Data ini kami
-            tampilkan untuk memberikan gambaran yang jelas tentang kondisi dan potensi desa kami. Kami berharap
-            informasi ini dapat menjadi acuan dalam perencanaan pembangunan dan pengambilan keputusan yang lebih baik
-            untuk masa depan Desa Katialada.
+        <p class="text-gray-500 my-5 lg:px-96">
+            {{ $content->deskripsi_data_desa }} 
         </p>
     </div>
 
