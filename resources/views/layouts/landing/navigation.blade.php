@@ -1,5 +1,5 @@
-<header class="sticky sm:fixed h-16 inset-0 z-50 border-b border-slate-100 bg-black/50 backdrop-blur-lg my-0 ">
-    <nav class="mx-auto flex max-w-6xl gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-4">
+<header class="sticky sm:fixed h-16 inset-0 z-50 border-b border-slate-100 bg-primary backdrop-blur-lg my-0 ">
+    <nav class="mx-auto flex max-w-6xl gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-3">
         <div class="relative flex items-center">
             <a href="/">
                 <img src="{{ asset('landing/images/logo-gorut.png') }}" loading="lazy" style="color:transparent"
@@ -25,7 +25,7 @@
         <!-- Tombol Login untuk Desktop -->
         <div class="hidden items-center justify-center gap-6 md:flex">
             <a href="{{ route('login') }}"
-                class="rounded-md bg-gradient-to-br bg-black px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md shadow-gray-400/50 transition-transform duration-200 ease-in-out hover:scale-[1.03]">
+                class="rounded-md bg-gradient-to-br bg-secondary px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md  transition-transform duration-200 ease-in-out hover:scale-[1.03]">
                 Login
             </a>
         </div>
