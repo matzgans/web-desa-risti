@@ -249,7 +249,7 @@
     <div data-aos="zoom-in" class="mt-16 text-center">
         <h1 class="text-darken text-2xl font-semibold">SOTK</h1>
         <p class="text-gray-500 my-5 lg:px-96">
-            Struktur Organisasi dan Tata Kerja Pemerintah Desa Katialada  kecamatan Kwandang, Kabupaten Gorontalo Utara, Gorontalo, Indonesia.
+            Struktur Organisasi dan Tata Kerja Pemerintah Desa Katialada  kecamatan Kwandang, Kabupaten Gorontalo Utara Utara, Gorontalo, Indonesia.
         </p>
 
         <!-- Card Wrapper -->

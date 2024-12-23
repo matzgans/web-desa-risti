@@ -116,13 +116,13 @@
         <!-- Header Section -->
         <div class="header">
             <div class="logo">
-                <img src="../public/landing/images/logo-gorut.png" alt="Logo kabgor">
+                <img src="../public/landing/images/logo-gorut.png" alt="Logo gorut">
             </div>
             <div class="header-text">
-                <h2>Pemerintah Kabupaten Gorontalo</h2>
-                <h2>Kecamatan Bilato</h2>
+                <h2>Pemerintah Kabupaten Gorontalo Utara</h2>
+                <h2>Kecamatan Kwandang</h2>
                 <h2>Desa Katialada</h2>
-                <p>Jalan Trans Sulawesi No. 01 Desa Katialada Kecamatan Bilato, Kode Pos 96585</p>
+                <p>Jalan Trans Sulawesi No. 01 Desa Katialada Kecamatan Kwandang, Kode Pos 96252</p>
             </div>
         </div>
         <hr>
@@ -146,7 +146,7 @@
                     <tr>
                         <td style="padding-right: 50px">Alamat</td>
                         <td>:</td>
-                        <td>Desa Katialada Kecamatan Bilato
+                        <td>Desa Katialada Kecamatan Kwandang
                             Kab.Gorontalo
                         </td>
                     </tr>
@@ -181,8 +181,8 @@
             </div>
             <div class="text-akhir">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bahwa nama tersebut adalah
                 benar-benar penduduk Desa
-                Katialada Kecamatan Bilato
-                Kabupaten Gorontalo dan berkelakuan baik serta belum pernah tersangkut dalam suatu perkara sipil maupun
+                Katialada Kecamatan Kwandang
+                Kabupaten Gorontalo Utara dan berkelakuan baik serta belum pernah tersangkut dalam suatu perkara sipil maupun
                 Kriminal dan selalu melaksanakan kewajibannya pada Pemerintah maupun pada pihak lain.</div>
 
             <div class="text-akhir">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surat keterangan ini dibuat dan

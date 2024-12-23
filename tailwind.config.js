@@ -1,6 +1,8 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 
+
+const theme = require('./resources/js/theme.json');
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -15,8 +17,8 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: "#922a2a",
-                secondary: "#DE7C7D",
+                primary: theme.primary, // Menggunakan primary dari theme.json
+                secondary: theme.secondary, // Menggunakan secondary dari theme.json
             },
             keyframes: {
                 zoomInOut: {

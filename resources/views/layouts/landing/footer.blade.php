@@ -1,4 +1,4 @@
-<footer class="mt-32 bg-black">
+<footer class="mt-32 bg-primary">
     <div class="max-w-lg mx-auto">
         <div class="flex py-5 justify-center text-white items-center px-20 sm:px-36">
             <div class="relative">
@@ -16,7 +16,7 @@
         <div class="text-center text-white">
             <div class="py-3 tracking-wide">
                 {{-- <p>Made By <span class="font-semibold">RISTI UNG</span></p> --}}
-                <p class="font-semibold"> &copy; 2024 - RISTI UNG.</p>
+                <p class="font-semibold"> &copy; 2024 - RISTI UNG</p>
             </div>
         </div>
     </div>
