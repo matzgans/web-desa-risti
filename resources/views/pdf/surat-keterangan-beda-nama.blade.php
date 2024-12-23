@@ -136,7 +136,7 @@
                     <tr>
                         <td style="padding-right: 50px">Alamat</td>
                         <td>:</td>
-                        <td>Desa Katialada Kecamatan Bilato
+                        <td>Desa Katialada Kecamatan Kwandang
                             Kab.Gorontalo
                         </td>
                     </tr>
