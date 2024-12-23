@@ -22,9 +22,11 @@ class LandingController extends Controller
 {
     public function index()
     {
+
         $articles = Article::where("is_show", "=", 1)->limit(4)->get();
         $currentVillageHead = Structure::where("position", "=", "Kepala Desa Menjabat")->limit(1)->get();
         $employees = Structure::whereNotIn('position', ['Kepala Desa Menjabat', 'Kepala Desa Lama'])->get();
+        $kepala_desa_menjabat = Structure::where("position", "=", "Kepala Desa Menjabat")->first();
         $recomendationArticles = Article::inRandomOrder()
             ->take(3)
             ->get();
@@ -39,6 +41,7 @@ class LandingController extends Controller
 
         return view("pages.landing.index", compact(
             "articles",
+            'kepala_desa_menjabat',
             "currentVillageHead",
             "employees",
             "recomendationArticles",
@@ -60,7 +63,7 @@ class LandingController extends Controller
         $visionsMissions = VisionMision::all("visi", "misi");
         $priorityPrograms = VillageProgram::where("program_category", "prioritas")->get();
 
-    
+
 
         return view("pages.landing.profile", [
             'currentVillageHead' => $currentVillageHead,
@@ -68,7 +71,7 @@ class LandingController extends Controller
             'formerVillageHeads' => $formerVillageHeads,
             "visionsMissions" =>  $visionsMissions,
             "priorityPrograms" => $priorityPrograms,
-        
+
         ]);
     }
 
@@ -196,7 +199,7 @@ class LandingController extends Controller
             'femaleCount',
             'totalResidents',
             'statusResidents',
-            
+
         ));
     }
 
