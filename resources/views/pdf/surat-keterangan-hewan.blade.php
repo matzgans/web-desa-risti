@@ -37,8 +37,10 @@
         }
 
         .header .logo img {
-            width: 80px;
-            height: 80px;
+            display: inline;
+            width: 60px;
+            height: 60px;
+            padding: 20px 0px;
         }
 
         .header h2 {
