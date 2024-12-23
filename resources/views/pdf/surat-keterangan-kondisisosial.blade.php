@@ -35,8 +35,10 @@
         }
 
         .header .logo img {
-            width: 80px;
-            height: 80px;
+            display: inline;
+            width: 60px;
+            height: 60px;
+            padding: 20px 0px;
         }
 
         .header h2 {
@@ -149,8 +151,7 @@
                         <td style="padding-right: 50px">Alamat</td>
                         <td>:</td>
                         <td>Desa Katialada Kecamatan Kwandang
-                            Kab.Gorontalo
-                        </td>
+                            Kab. Gorontalo Utara                        </td>
                     </tr>
 
                 </table>

@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             VillageProgramSeeder::class,
             ContentSeeder::class,
             ComunicationDeviceSeeder::class,
+            ThemeSeeder::class
         ]);
     }
 }
