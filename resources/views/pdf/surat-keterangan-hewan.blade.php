@@ -219,7 +219,7 @@
                     <div class="text-table">
                         <p class="kepala-desa" style="margin-bottom: 65px">Kepala Desa Katialada</p>
                         <p class="nama-kepala-desa" style="margin-bottom: 0px">MARTEN H. SALEH</p>
-                        <p>NIP : 19791209 201001 1 003</p>
+                        <p class="nip">NIP: {{ $nip }}</p>
                     </div>
                 </div>
             </div>

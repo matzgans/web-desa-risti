@@ -149,7 +149,7 @@
                         <td style="padding-right: 50px">Alamat</td>
                         <td>:</td>
                         <td>Desa Katialada Kecamatan Kwandang
-                            Kab. Gorontalo Utara                        </td>
+                            Kab. Gorontalo Utara </td>
                     </tr>
 
                 </table>
@@ -159,7 +159,8 @@
                 pelapor,Nama: {{ ucfirst($name_saksi1) }}; NiK: 7501095708470001 Bahwa telah meninggal dunia pada hari:
                 Kamis
                 tanggal
-                15-08-2024 jam 20.00 Pagi di Desa/Kelurahan Katialada Kecamatan Kwandang Kabupaten Gorontalo Utara Provinsi
+                15-08-2024 jam 20.00 Pagi di Desa/Kelurahan Katialada Kecamatan Kwandang Kabupaten Gorontalo Utara
+                Provinsi
                 Gorontalo.</div>
             <div class="table" style="margin: 0px;">
                 <table>
@@ -301,7 +302,7 @@
                 <div class="text-table">
                     <p class="kepala-desa">Kepala Desa Katialada</p>
                     <p class="nama-kepala-desa">{{ ucfirst($kepala_desa) }}</p>
-                    <p class="nip">NIP : 19791209 201001 1 003</p>
+                    <p class="nip">NIP: {{ $nip }}</p>
                 </div>
             </div>
         </div>

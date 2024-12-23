@@ -145,6 +145,7 @@ class DocumentBedaTanggalController extends Controller
         if ($document->no_surat) {
             $data = json_decode($document->data, true);
             $data['kepala_desa'] = $kepala_desa->staff_name;
+            $data['nip'] = $kepala_desa->nip;
             $pdf = Pdf::loadView('pdf.surat-keterangan-beda-tanggal', $data);
             $fileName = 'surat_keterangan_beda-tanggal' . htmlspecialchars($data['name']) . '.pdf';
             $document->update(['is_status' => 1]);
