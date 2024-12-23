@@ -1,5 +1,5 @@
 <button
-    class="ms-3 mt-2 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 sm:hidden"
+    class="ms-3 mt-2 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 sm:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
     data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" type="button"
     aria-controls="sidebar-multi-level-sidebar">
     <span class="sr-only">Open sidebar</span>
@@ -269,7 +269,7 @@
                     <span class="ms-3">Tema</span>
                 </x-nav-link>
             </li>
-            
+
 
             <li>
                 <x-nav-link :href="route('admin.content.index')" :active="request()->routeIs('admin.content.*')">
@@ -284,7 +284,7 @@
                     <span class="ms-3">Konten</span>
                 </x-nav-link>
             </li>
-            
+
 
             <li class="md:hidden">
                 <form method="POST" action="{{ route('logout') }}">
