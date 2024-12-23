@@ -694,7 +694,7 @@
                             <input
                                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                                 id="alamat_ayah" name="address_ayah" type="text"
-                                placeholder="Desa Katialada. Kecamatan Bilato" />
+                                placeholder="Desa Katialada. Kecamatan Kwandang" />
                         </div>
                         <div>
                             <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -725,7 +725,7 @@
                             <input
                                 class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                                 id="alamat_ibu" name="address_ibu" type="text"
-                                placeholder="Desa Katialada Kecamatan Bilato" />
+                                placeholder="Desa Katialada Kecamatan Kwandang" />
                         </div>
 
                         <div>
@@ -1040,7 +1040,7 @@
                                 <label class="block text-sm font-medium text-gray-700">Di:</label>
                                 <input class="mt-1 w-full rounded-md border p-2 focus:ring focus:ring-blue-500"
                                     name="place" type="text"
-                                    placeholder="Desa Katialada Kec. Bilato, Kabupaten Gorontalo" />
+                                    placeholder="Desa Katialada Kec. Bilato, Kabupaten Gorontalo Utara" />
                             </div>
                         </div>
 
@@ -1069,7 +1069,7 @@
                             <label class="block text-sm font-medium text-gray-700">Alamat:</label>
                             <input class="mt-1 w-full rounded-md border p-2 focus:ring focus:ring-blue-500"
                                 name="address" type="text"
-                                placeholder="Desa Katialada, Kecamatan Bilato, Kabupaten Gorontalo" />
+                                placeholder="Desa Katialada, Kecamatan Kwandang, Kabupaten Gorontalo Utara" />
                         </div>
 
                         <div class="mb-2">
@@ -1146,7 +1146,7 @@
                         <label class="block text-sm font-medium text-gray-700">Alamat:</label>
                         <input class="mt-1 w-full rounded-md border p-2 focus:ring focus:ring-blue-500" name="address"
                             type="text" required
-                            placeholder="Desa Katialada, Kecamatan Bilato, Kabupaten Gorontalo" />
+                            placeholder="Desa Katialada, Kecamatan Kwandang, Kabupaten Gorontalo Utara" />
                     </div>
 
                     <h2 class="mb-4 text-lg font-semibold">Orang Tua/Wali dari Calon Mahasiswa Baru:</h2>

@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Menggunakan variabel CSS untuk warna */
+:root {
+    --primary-color: #8c2626;  /* Nilai default */
+    --secondary-color: #878787;  /* Nilai default */
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+/* Anda juga bisa menambahkan aturan untuk border, text, dll */
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}

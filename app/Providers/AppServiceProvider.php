@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Carbon\Carbon;
+use App\Models\Theme;
 use App\Models\Content;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -30,5 +31,9 @@ class AppServiceProvider extends ServiceProvider
                 $view->with('content', Content::first());
             }
         );
+
+        // Menyebarkan data tema ke semua view
+        $theme = Theme::first(); // Ambil tema pertama dari database
+        View::share('theme', $theme); // Bagikan ke semua view
     }
 }

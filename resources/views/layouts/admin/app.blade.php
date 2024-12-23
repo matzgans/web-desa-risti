@@ -36,6 +36,12 @@
     @stack('before-scripts')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+    <script>
+        // Pastikan data tema sudah tersedia
+        document.documentElement.style.setProperty('--primary-color', '{{ $theme->primary ?? "#8c2626" }} ');
+        document.documentElement.style.setProperty('--secondary-color', '{{ $theme->secondary ?? "#878787" }}');
+    </script>
     @stack('after-scripts')
 </body>
 

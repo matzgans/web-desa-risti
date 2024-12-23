@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Theme; 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use App\Http\Controllers\Controller;
 
 class ThemeController extends Controller
 {
@@ -13,55 +14,50 @@ class ThemeController extends Controller
      */
     public function index()
     {
-        $themes = Theme::all(); // Pastikan model Theme benar
-        return view('pages.admin.theme.index', compact('themes')); 
+        $theme = Theme::getTheme(); // Mengambil atau membuat tema jika belum ada
+        return view('pages.admin.theme.index', compact('theme')); // Mengirim tema ke view
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Store or update the theme data.
      */
     public function store(Request $request)
     {
-        //
+        // Ambil tema pertama atau buat yang baru jika belum ada
+        $theme = Theme::getTheme();
+
+        // Validasi inputan warna
+        $request->validate([
+            'primary' => 'required|string|regex:/^#[0-9A-Fa-f]{6}$/', // Validasi format hex warna
+            'secondary' => 'required|string|regex:/^#[0-9A-Fa-f]{6}$/',
+        ]);
+
+            // Cek data yang dikirim ke server
+        Log::debug('Current Theme:', ['primary' => $theme->primary, 'secondary' => $theme->secondary]);
+        Log::debug('Updated Data:', ['primary' => $request->input('primary'), 'secondary' => $request->input('secondary')]);
+        
+
+        // Update atau simpan tema
+        $theme->update([
+            'primary' => $request->input('primary'),
+            'secondary' => $request->input('secondary'),
+        ]);
+
+        return redirect()->route('admin.theme.index')->with('success', 'Theme updated successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function exportThemeToJson()
     {
-        //
+        $theme = Theme::getTheme(); // Ambil tema pertama atau buat yang baru jika belum ada
+        $themeData = [
+            'primary' => $theme->primary,
+            'secondary' => $theme->secondary,
+        ];
+
+        file_put_contents(resource_path('js/theme.json'), json_encode($themeData));
+
+        return response()->json(['message' => 'Theme exported to JSON']);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

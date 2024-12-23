@@ -8,7 +8,13 @@ class Theme extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'status']; // Sesuaikan dengan tabel Anda
+    protected $fillable = ['primary', 'secondary'];
+
+    // Method untuk mengambil tema yang ada (hanya satu tema)
+    public static function getTheme()
+    {
+        return self::first() ?? new self();
+    }
 }
 
 ?>
