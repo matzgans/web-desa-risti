@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\LivingCondition;
+use App\Models\Theme;
 use App\Models\TransportationMean;
 use App\Models\User;
 use App\Models\VillageProgram;
@@ -35,6 +36,7 @@ class DatabaseSeeder extends Seeder
             VillageProgramSeeder::class,
             ContentSeeder::class,
             ComunicationDeviceSeeder::class,
+            ThemeSeeder::class,
         ]);
     }
 }
