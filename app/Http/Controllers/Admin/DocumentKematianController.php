@@ -132,7 +132,7 @@ class DocumentKematianController extends Controller
         if ($document->no_surat) {
             $data = json_decode($document->data, true);
             $data['kepala_desa'] = $kepala_desa->staff_name;
-
+            $data['nip'] = $kepala_desa->nip;
             // Mengatur ukuran kertas F4
             $pdf = Pdf::loadView('pdf.surat-keterangan-kematian', $data)
                 ->setPaper([0, 0, 595.44, 936], 'portrait'); // Ukuran F4 dalam poin
