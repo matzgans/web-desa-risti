@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Structure extends Model
 {
     use HasFactory;
+    protected $table = 'structures';
+
+    protected $guarded = [];
 }

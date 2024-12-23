@@ -18,6 +18,7 @@ return new class extends Migration
             $table->uuid();
             $table->string('staff_photo');
             $table->string('staff_description')->nullable();
+            $table->string('nip')->nullable()->unique();
             $table->timestamps();
         });
     }
