@@ -149,7 +149,7 @@
                         <td style="padding-right: 50px">Alamat</td>
                         <td>:</td>
                         <td>Desa Katialada Kecamatan Kwandang
-                            Kab. Gorontalo Utara                        </td>
+                            Kab. Gorontalo Utara </td>
                     </tr>
 
                 </table>
@@ -181,7 +181,8 @@
                 </table>
             </div>
             <div class="text-akhir">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bahwa yang bersangkutan benar-benar
-                Penduduk Desa Katialada Kecamatan Kwandang Kabupaten Gorontalo Utara, dan tergolong Keluarga Tidak Mampu.</div>
+                Penduduk Desa Katialada Kecamatan Kwandang Kabupaten Gorontalo Utara, dan tergolong Keluarga Tidak
+                Mampu.</div>
             <div class="text-akhir">Demikian Surat Keterangan ini dibuat
                 untuk dapat dipergunakan seperlunya.</div>
 
@@ -204,7 +205,7 @@
                 <div class="text-table">
                     <p class="kepala-desa">Kepala Desa Katialada</p>
                     <p class="nama-kepala-desa">{{ ucfirst($kepala_desa) }}</p>
-                    <p class="nip">NIP : 19791209 201001 1 003</p>
+                    <p class="nip">NIP: {{ $nip }}</p>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ use App\Models\Theme;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class ThemeController extends Controller
 {
@@ -26,11 +27,15 @@ class ThemeController extends Controller
         // Ambil tema pertama atau buat yang baru jika belum ada
         $theme = Theme::getTheme();
 
-        // Validasi inputan warna
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'primary' => 'required|string|regex:/^#[0-9A-Fa-f]{6}$/', // Validasi format hex warna
             'secondary' => 'required|string|regex:/^#[0-9A-Fa-f]{6}$/',
         ]);
+
+        // Jika validasi gagal, kembali dengan pesan kesalahan
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
             // Cek data yang dikirim ke server
         Log::debug('Current Theme:', ['primary' => $theme->primary, 'secondary' => $theme->secondary]);

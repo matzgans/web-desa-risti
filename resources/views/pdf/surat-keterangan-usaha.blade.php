@@ -214,7 +214,7 @@
                 <div class="text-table">
                     <p class="kepala-desa">Kepala Desa Katialada</p>
                     <p class="nama-kepala-desa">{{ ucfirst($kepala_desa) }}</p>
-                    <p class="nip">NIP : 19791209 201001 1 003</p>
+                    <p class="nip">NIP: {{ $nip }}</p>
                 </div>
             </div>
         </div>

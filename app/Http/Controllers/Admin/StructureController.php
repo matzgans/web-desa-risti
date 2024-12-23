@@ -65,7 +65,8 @@ class StructureController extends Controller
                 //     }
                 // },
             ],
-            'staff_photo' => 'required|image|mimes:jpg,jpeg,png|max:2048', // Mendukung file PNG dengan maksimal ukuran 2MB
+            'staff_photo' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'nip' => 'nullable|numeric|digits:18|unique:residents,nik,' // Mendukung file PNG dengan maksimal ukuran 2MB
         ]);
 
         // Jika validasi gagal, kembali dengan pesan kesalahan
@@ -98,6 +99,7 @@ class StructureController extends Controller
         $structure->staff_description = $request->staff_description;
         $structure->position = $request->position;
         $structure->staff_photo = $fileName;
+        $structure->nip = $request -> nip;
 
         // Simpan data ke database
         $structure->save();
@@ -129,9 +131,11 @@ class StructureController extends Controller
      */
     public function update(Request $request, string $uuid)
     {
+
         // Cari data berdasarkan UUID
         $structure = Structure::where('uuid', $uuid)->firstOrFail();
-
+        // dd($structure);
+        
         // Validasi input
         $validator = Validator::make($request->all(), [
             'staff_name' => 'required|string|max:255|min:6',
@@ -157,6 +161,7 @@ class StructureController extends Controller
                 // },
             ],
             'staff_photo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048', // Foto bersifat opsional saat update
+            'nip' => 'nullable|numeric|digits:18|unique:structures,nip,' . $structure->id,
         ]);
 
         // Jika validasi gagal, kembali dengan pesan kesalahan
@@ -185,6 +190,7 @@ class StructureController extends Controller
         $structure->staff_name = $request->staff_name;
         $structure->staff_description = $request->staff_description;
         $structure->position = $request->position;
+        $structure->nip = $request->nip;
 
         // Simpan perubahan ke database
         $structure->save();

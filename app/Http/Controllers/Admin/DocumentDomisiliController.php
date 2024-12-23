@@ -118,6 +118,7 @@ class DocumentDomisiliController extends Controller
             # code...
             $data = json_decode($document->data, true);
             $data['kepala_desa'] = $kepala_desa->staff_name;
+            $data['nip'] = $kepala_desa->nip;
             $pdf = Pdf::loadView('pdf.surat-keterangan-domisili', $data);
             $fileName = 'surat_keterangan_domisili_' . htmlspecialchars($data['name']) . '.pdf';
             $document->update(['is_status' => 1]);

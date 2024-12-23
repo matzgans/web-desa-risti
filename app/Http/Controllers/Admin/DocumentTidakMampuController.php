@@ -115,6 +115,7 @@ class DocumentTidakMampuController extends Controller
             $data = json_decode($document->data, true);
             $data['kepala_desa'] = $kepala_desa->staff_name;
             $data['kepala_desa_position'] = $kepala_desa->position;
+            $data['nip'] = $kepala_desa->nip;
             $pdf = Pdf::loadView('pdf.surat-keterangan-tidakmampu', $data);
             $fileName = 'surat_keterangan_tidakmampu_' . htmlspecialchars($data['name']) . '.pdf';
             $document->update(['is_status' => 1]);

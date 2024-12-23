@@ -1,26 +1,26 @@
 <x-landing-layout>
-    <div id="controls-carousel" class="relative w-full mb-10 mt-0" data-carousel="dynamic">
+    <div class="relative mb-10 mt-0 w-full" id="controls-carousel" data-carousel="dynamic">
         <!-- Carousel wrapper -->
-        <div class="relative h-[500px] md:h-[700px] lg:h-[900px] overflow-hidden rounded-lg bg-gray-200">
+        <div class="relative h-[500px] overflow-hidden rounded-lg bg-gray-200 md:h-[700px] lg:h-[900px]">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div class="flex flex-col md:flex-row items-center h-full">
+                <div class="flex h-full flex-col items-center md:flex-row">
                     <!-- Image -->
-                    <img src="{{ asset('landing/images/kepala-desa.png') }}"
-                        class="block w-full h-1/2 md:h-full md:w-1/2 object-contain md:object-cover" alt="...">
+                    <img class="block h-1/2 w-full object-contain md:h-full md:w-1/2 md:object-cover"
+                        src="{{ asset('landing/images/kepala-desa.png') }}" alt="...">
                     <!-- Text Content -->
-                    <div class="w-full md:w-1/2 p-4 md:p-8 bg-gray-200/50">
+                    <div class="w-full bg-gray-200/50 p-4 md:w-1/2 md:p-8">
                         <h1
-                            class="mb-4 text-2xl  font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-6xl">
+                            class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-6xl">
                             Selamat Datang Di Website Resmi Desa Katialada
                         </h1>
-                        <p class="mb-6 text-sm md:text-lg font-normal text-black lg:text-xl text-justify">
+                        <p class="mb-6 text-justify text-sm font-normal text-black md:text-lg lg:text-xl">
                             {{ $content->sambutan_pertama }}
                         </p>
-                        <a href="/profiles"
-                            class="inline-flex items-center justify-center px-4 py-2 md:px-5 md:py-3 text-sm md:text-base font-medium text-center text-white bg-black rounded-lg hover:bg-gray-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                        <a class="inline-flex items-center justify-center rounded-lg bg-black px-4 py-2 text-center text-sm font-medium text-white hover:bg-gray-500 focus:ring-4 focus:ring-blue-300 md:px-5 md:py-3 md:text-base dark:focus:ring-blue-900"
+                            href="/profiles">
                             Visi Misi
-                            <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                            <svg class="ms-2 h-3.5 w-3.5 rtl:rotate-180" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -32,25 +32,24 @@
 
             @foreach ($recomendationArticles as $article)
                 <div class="hidden duration-700 ease-in-out" data-carousel-item = "active">
-                    <div class="relative w-full h-full overflow-hidden">
+                    <div class="relative h-full w-full overflow-hidden">
                         <!-- Image with continuous zoom animation -->
-                        <img src="{{ asset('article/thumb/' . $article->thumbnail) }}"
-                            class="block w-full h-full object-cover transform animate-zoomInOut" alt="..."
-                            loading="lazy">
+                        <img class="block h-full w-full transform animate-zoomInOut object-cover"
+                            src="{{ asset('article/thumb/' . $article->thumbnail) }}" alt="..." loading="lazy">
 
                         <!-- Text Content (Positioned bottom-left) -->
                         <div
-                            class="absolute lg:bottom-10 lg:left-10 bottom-0 left-0 w-full md:w-auto p-4 md:p-8 bg-gray-800/60 text-white">
+                            class="absolute bottom-0 left-0 w-full bg-gray-800/60 p-4 text-white md:w-auto md:p-8 lg:bottom-10 lg:left-10">
                             <h1 class="mb-2 text-lg font-extrabold leading-none tracking-tight md:text-4xl lg:text-7xl">
                                 {{ $article->title }}
                             </h1>
-                            <p class="mb-4 text-sm md:text-lg font-normal">
+                            <p class="mb-4 text-sm font-normal md:text-lg">
                                 {{ Str::limit($article->content, 100) }}
                             </p>
-                            <a href="{{ route('article.detail', ['slug' => $article->slug]) }}"
-                                class="inline-flex items-center justify-center px-4 py-2 text-sm md:text-base font-medium bg-black rounded-lg hover:bg-gray-500">
+                            <a class="inline-flex items-center justify-center rounded-lg bg-black px-4 py-2 text-sm font-medium hover:bg-gray-500 md:text-base"
+                                href="{{ route('article.detail', ['slug' => $article->slug]) }}">
                                 Baca Selengkapnya
-                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                <svg class="ms-2 h-3.5 w-3.5 rtl:rotate-180" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -66,12 +65,12 @@
 
         </div>
         <!-- Slider controls -->
-        <button type="button"
-            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-prev>
+        <button
+            class="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+            data-carousel-prev type="button">
             <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70">
+                <svg class="h-4 w-4 text-white rtl:rotate-180 dark:text-gray-800" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M5 1 1 5l4 4" />
@@ -79,12 +78,12 @@
                 <span class="sr-only">Previous</span>
             </span>
         </button>
-        <button type="button"
-            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
+        <button
+            class="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+            data-carousel-next type="button">
             <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70">
+                <svg class="h-4 w-4 text-white rtl:rotate-180 dark:text-gray-800" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="m1 9 4-4-4-4" />
@@ -105,28 +104,29 @@
     </div>
 
 
-    <div class="max-w-7xl mx-auto px-4 py-12">
-        <div class="flex flex-col md:flex-row items-center gap-8">
+    <div class="mx-auto max-w-7xl px-4 py-12">
+        <div class="flex flex-col items-center gap-8 md:flex-row">
             <!-- Image Section -->
             <div class="w-full md:w-1/3">
-                <img src="{{ asset('landing/images/kepala-desa.png') }}" alt="Kepala Desa"
-                    class="w-full object-cover rounded-lg shadow-lg">
+                <img class="w-full rounded-lg object-cover shadow-lg"
+                    src="{{ asset('structure/staff_profile/' . $kepala_desa_menjabat->staff_photo) }}"
+                    alt="Kepala Desa">
             </div>
 
             <!-- Content Section -->
-            <div class="w-full md:w-2/3 space-y-6">
+            <div class="w-full space-y-6 md:w-2/3">
                 <!-- Quote Mark -->
-                <div class="text-8xl text-gray-300 font-serif leading-none">"</div>
+                <div class="font-serif text-8xl leading-none text-gray-300">"</div>
 
                 <!-- Welcome Text -->
-                <div class="text-gray-700 leading-relaxed text-lg text-justify">
+                <div class="text-justify text-lg leading-relaxed text-gray-700">
                     {{ $content->sambutan_kedua }}
                 </div>
 
                 <!-- Signature -->
                 <div class="space-y-2">
                     @foreach ($currentVillageHead as $head)
-                        <div class="text-2xl font-script text-gray-800"> {{ $head->staff_name }}
+                        <div class="font-script text-2xl text-gray-800"> {{ $head->staff_name }}
                         </div>
                         <div class="text-sm font-semibold uppercase tracking-wider text-gray-600">KEPALA DESA Katialada
                         </div>
@@ -138,20 +138,21 @@
 
     {{-- data --}}
 
-    <div class="pt-5 pb-20 px-20 bg-black">
-        <div data-aos="zoom-in" class="mt-16 text-center">
-            <h1 class="text-darken text-2xl font-semibold text-white">Data Desa <span class="text-white">Katialada</span>
+    <div class="bg-black px-20 pb-20 pt-5">
+        <div class="mt-16 text-center" data-aos="zoom-in">
+            <h1 class="text-darken text-2xl font-semibold text-white">Data Desa <span
+                    class="text-white">Katialada</span>
             </h1>
-            <p class="text-gray-100 my-5 lg:px-96">
+            <p class="my-5 text-gray-100 lg:px-96">
                 {{ $content->deskripsi_data_desa }}
             </p>
         </div>
-        <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4 mx-10">
-            <div class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-gray-200 dark:bg-gray-800">
-                <div class="p-4 flex items-center">
+        <div class="mx-10 mb-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div class="shadow-xs min-w-0 overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-800">
+                <div class="flex items-center p-4">
                     <div
-                        class="p-3 rounded-full text-orange-500 dark:text-orange-100 bg-orange-100 dark:bg-orange-500 mr-4">
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-5 h-5">
+                        class="mr-4 rounded-full bg-orange-100 p-3 text-orange-500 dark:bg-orange-500 dark:text-orange-100">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
                             </path>
@@ -167,10 +168,10 @@
                     </div>
                 </div>
             </div>
-            <div class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-gray-200 dark:bg-gray-800">
-                <div class="p-4 flex items-center">
-                    <div class="p-3 rounded-full text-blue-500 dark:text-blue-100 bg-blue-100 dark:bg-blue-500 mr-4">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+            <div class="shadow-xs min-w-0 overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-800">
+                <div class="flex items-center p-4">
+                    <div class="mr-4 rounded-full bg-blue-100 p-3 text-blue-500 dark:bg-blue-500 dark:text-blue-100">
+                        <svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path fill-rule="evenodd"
@@ -189,11 +190,11 @@
                     </div>
                 </div>
             </div>
-            <div class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-gray-200 dark:bg-gray-800">
-                <div class="p-4 flex items-center">
+            <div class="shadow-xs min-w-0 overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-800">
+                <div class="flex items-center p-4">
                     <div
-                        class="p-3 rounded-full text-green-500 dark:text-green-100 bg-green-100 dark:bg-green-500 mr-4">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        class="mr-4 rounded-full bg-green-100 p-3 text-green-500 dark:bg-green-500 dark:text-green-100">
+                        <svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path fill-rule="evenodd"
@@ -212,10 +213,10 @@
                     </div>
                 </div>
             </div>
-            <div class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-gray-200 dark:bg-gray-800">
-                <div class="p-4 flex items-center">
-                    <div class="p-3 rounded-full text-pink-500 dark:text-pink-100 bg-pink-100 dark:bg-pink-500 mr-4">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+            <div class="shadow-xs min-w-0 overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-800">
+                <div class="flex items-center p-4">
+                    <div class="mr-4 rounded-full bg-pink-100 p-3 text-pink-500 dark:bg-pink-500 dark:text-pink-100">
+                        <svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path fill-rule="evenodd"
@@ -236,9 +237,9 @@
                 </div>
             </div>
         </div>
-        <div data-aos="zoom-in" class="mt-16 text-center">
-            <a href="{{ route('landing.data') }}"
-                class="text-darken text-2xl font-semibold text-white underline">Selengkapnya >
+        <div class="mt-16 text-center" data-aos="zoom-in">
+            <a class="text-darken text-2xl font-semibold text-white underline"
+                href="{{ route('landing.data') }}">Selengkapnya >
             </a>
 
         </div>
@@ -246,10 +247,11 @@
 
 
 
-    <div data-aos="zoom-in" class="mt-16 text-center">
+    <div class="mt-16 text-center" data-aos="zoom-in">
         <h1 class="text-darken text-2xl font-semibold">SOTK</h1>
-        <p class="text-gray-500 my-5 lg:px-96">
-            Struktur Organisasi dan Tata Kerja Pemerintah Desa Katialada  kecamatan Kwandang, Kabupaten Gorontalo Utara Utara, Gorontalo, Indonesia.
+        <p class="my-5 text-gray-500 lg:px-96">
+            Struktur Organisasi dan Tata Kerja Pemerintah Desa Katialada kecamatan Kwandang, Kabupaten Gorontalo Utara
+            Utara, Gorontalo, Indonesia.
         </p>
 
         <!-- Card Wrapper -->
@@ -257,8 +259,8 @@
             <!-- Kepala Desa Card -->
             @foreach ($currentVillageHead as $head)
                 <div
-                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <img class="w-full h-96 object-cover rounded-t-lg"
+                    class="max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+                    <img class="h-96 w-full rounded-t-lg object-cover"
                         src="{{ asset('structure/staff_profile/' . $head->staff_photo) }}" alt="" />
                     <div class="p-5">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -272,8 +274,8 @@
             <!-- Karyawan Lainnya Card -->
             @foreach ($employees as $employee)
                 <div
-                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <img class="w-full h-96 object-cover rounded-t-lg"
+                    class="max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+                    <img class="h-96 w-full rounded-t-lg object-cover"
                         src="{{ asset('structure/staff_profile/' . $employee->staff_photo) }}" alt="" />
                     <div class="p-5">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -291,20 +293,20 @@
 
     {{-- artikel --}}
     @if ($articles->count() > 0)
-        <div data-aos="zoom-in" class="mt-16 text-center">
-            <h1 class="text-darken text-2xl font-semibold ">Artikel</h1>
-            <p class="text-gray-500 my-5 lg:px-96 text-justify">
+        <div class="mt-16 text-center" data-aos="zoom-in">
+            <h1 class="text-darken text-2xl font-semibold">Artikel</h1>
+            <p class="my-5 text-justify text-gray-500 lg:px-96">
                 {{ $content->artikel }}
             </p>
         </div>
     @endif
-    <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+    <div class="mx-auto max-w-screen-xl p-5 sm:p-10 md:p-16">
         @if ($articles->count() > 0)
-            <div class="border-b mb-5 flex justify-between text-sm">
-                <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
-                    <svg class="h-6 mr-3" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455.005 455.005"
-                        style="enable-background:new 0 0 455.005 455.005;" xml:space="preserve">
+            <div class="mb-5 flex justify-between border-b text-sm">
+                <div class="flex items-center border-b-2 border-indigo-600 pb-2 pr-2 uppercase text-indigo-600">
+                    <svg class="mr-3 h-6" id="Capa_1" style="enable-background:new 0 0 455.005 455.005;"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 455.005 455.005" xml:space="preserve">
                         <g>
                             <path
                                 d="M446.158,267.615c-5.622-3.103-12.756-2.421-19.574,1.871l-125.947,79.309c-3.505,2.208-4.557,6.838-2.35,10.343 c2.208,3.505,6.838,4.557,10.343,2.35l125.947-79.309c2.66-1.675,4.116-1.552,4.331-1.432c0.218,0.12,1.096,1.285,1.096,4.428 c0,8.449-6.271,19.809-13.42,24.311l-122.099,76.885c-6.492,4.088-12.427,5.212-16.284,3.084c-3.856-2.129-6.067-7.75-6.067-15.423 c0-19.438,13.896-44.61,30.345-54.967l139.023-87.542c2.181-1.373,3.503-3.77,3.503-6.347s-1.323-4.974-3.503-6.347L184.368,50.615 c-2.442-1.538-5.551-1.538-7.993,0L35.66,139.223C15.664,151.815,0,180.188,0,203.818v4c0,23.63,15.664,52.004,35.66,64.595 l209.292,131.791c3.505,2.207,8.136,1.154,10.343-2.35c2.207-3.505,1.155-8.136-2.35-10.343L43.653,259.72 C28.121,249.941,15,226.172,15,207.818v-4c0-18.354,13.121-42.122,28.653-51.902l136.718-86.091l253.059,159.35l-128.944,81.196 c-20.945,13.189-37.352,42.909-37.352,67.661c0,13.495,4.907,23.636,13.818,28.555c3.579,1.976,7.526,2.956,11.709,2.956 c6.231,0,12.985-2.176,19.817-6.479l122.099-76.885c11.455-7.213,20.427-23.467,20.427-37.004 C455.004,277.119,451.78,270.719,446.158,267.615z">
@@ -329,38 +331,38 @@
                             </path>
                         </g>
                     </svg>
-                    <a href="#" class="font-semibold inline-block">Artikel Berita</a>
+                    <a class="inline-block font-semibold" href="#">Artikel Berita</a>
                 </div>
                 <a href="{{ route('landing.article') }}">Lihat Semua</a>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
         @endif
 
         @foreach ($articles as $article)
-            <div class="rounded overflow-hidden shadow-lg flex flex-col">
+            <div class="flex flex-col overflow-hidden rounded shadow-lg">
                 <a href="{{ route('article.detail', ['slug' => $article->slug]) }}"></a>
                 <div class="relative"><a href="{{ route('article.detail', ['slug' => $article->slug]) }}">
                         <img class="w-full" src="{{ asset('article/thumb/' . $article->thumbnail) }}"
                             alt="Sunset in the mountains">
                         <div
-                            class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                            class="absolute bottom-0 left-0 right-0 top-0 bg-gray-900 opacity-25 transition duration-300 hover:bg-transparent">
                         </div>
                     </a>
 
                 </div>
-                <div class="px-6 py-4 mb-auto">
-                    <a href="{{ route('article.detail', ['slug' => $article->slug]) }}"
-                        class="font-medium text-lg  hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">{{ $article->title }}</a>
-                    <p class="text-gray-500 text-sm">
+                <div class="mb-auto px-6 py-4">
+                    <a class="mb-2 inline-block text-lg font-medium transition duration-500 ease-in-out hover:text-indigo-600"
+                        href="{{ route('article.detail', ['slug' => $article->slug]) }}">{{ $article->title }}</a>
+                    <p class="text-sm text-gray-500">
                         {{ Str::limit($article->content, 30) }}
                     </p>
                 </div>
-                <div class="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">
-                    <span href="#"
-                        class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
-                        <svg height="13px" width="13px" version="1.1" id="Layer_1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                <div class="flex flex-row items-center justify-between bg-gray-100 px-6 py-3">
+                    <span class="font-regular mr-1 flex flex-row items-center py-1 text-xs text-gray-900"
+                        href="#">
+                        <svg id="Layer_1" style="enable-background:new 0 0 512 512;" height="13px" width="13px"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                             xml:space="preserve">
                             <g>
                                 <g>
@@ -373,9 +375,9 @@
                         <span class="ml-1">{{ $article->created_at->diffForHumans() }}</span>
                     </span>
 
-                    <span href="#"
-                        class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                    <span class="font-regular mr-1 flex flex-row items-center py-1 text-xs text-gray-900"
+                        href="#">
+                        <svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                             viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -403,15 +405,15 @@
 
     <!-- component -->
     <div class="container mx-auto p-4">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
             <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="{{ asset('landing/images/galery-1.jpeg') }}" alt="" />
+                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-1.jpeg') }}"
+                        alt="" loading="lazy" />
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="{{ asset('landing/images/galery-2.jpeg') }}" alt="" />
+                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-2.jpeg') }}"
+                        alt="" loading="lazy" />
                 </div>
                 {{-- <div>
                     <img class="h-auto max-w-full rounded-lg" loading="lazy"
@@ -420,12 +422,12 @@
             </div>
             <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="{{ asset('landing/images/galery-4.jpeg') }}" alt="" />
+                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-4.jpeg') }}"
+                        alt="" loading="lazy" />
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="{{ asset('landing/images/galery-7.jpeg') }}" alt="" />
+                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-7.jpeg') }}"
+                        alt="" loading="lazy" />
                 </div>
                 {{-- <div>
                     <img class="h-auto max-w-full rounded-lg" loading="lazy"
@@ -435,12 +437,12 @@
             </div>
             <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="{{ asset('landing/images/galery-3.jpeg') }}" alt="" />
+                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-3.jpeg') }}"
+                        alt="" loading="lazy" />
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="{{ asset('landing/images/galery-5.jpeg') }}" alt="" />
+                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-5.jpeg') }}"
+                        alt="" loading="lazy" />
                 </div>
                 {{-- <div>
                     <img class="h-auto max-w-full rounded-lg" loading="lazy"
@@ -450,12 +452,12 @@
             </div>
             <div class="grid gap-4">
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="{{ asset('landing/images/galery-6.jpeg') }}" alt="" />
+                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-6.jpeg') }}"
+                        alt="" loading="lazy" />
                 </div>
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="{{ asset('landing/images/galery-2.jpeg') }}" alt="" />
+                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-2.jpeg') }}"
+                        alt="" loading="lazy" />
                 </div>
                 {{-- <div>
                     <img class="h-auto max-w-full rounded-lg" loading="lazy"
@@ -476,6 +478,9 @@
     </div>
 
     <div class="flex justify-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.759985569857!2d122.90087848780126!3d0.8493064735045458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32794f76be888f7f%3A0x1a3123d14411b3b2!2sKantor%20Desa%20Katialada!5e0!3m2!1sen!2sid!4v1734709360554!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.759985569857!2d122.90087848780126!3d0.8493064735045458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32794f76be888f7f%3A0x1a3123d14411b3b2!2sKantor%20Desa%20Katialada!5e0!3m2!1sen!2sid!4v1734709360554!5m2!1sen!2sid"
+            style="border:0;" width="600" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </x-landing-layout>

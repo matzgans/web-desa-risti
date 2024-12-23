@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Content;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ContentController extends Controller
 {
@@ -33,8 +34,8 @@ class ContentController extends Controller
      */
     public function store(Request $request)
     {
-        // Validasi data
-        $validated = $request->validate([
+
+        $validator = Validator::make($request->all(), [
             'sambutan_pertama' => 'nullable|string',
             'sambutan_kedua' => 'nullable|string',
             'deskripsi_data_desa' => 'nullable|string',
@@ -44,14 +45,24 @@ class ContentController extends Controller
             'artikel' => 'nullable|string',
             'penyuratan' => 'nullable|string',
         ]);
-
-        // Jika tidak ada data sebelumnya, buat baru
+        
+        // Jika validasi gagal, kembali dengan pesan kesalahan
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+        
+        // Ambil data valid dari validator
+        $data = $validator->validated();
+        
+        // Perbarui atau buat data baru
         Content::updateOrCreate(
-            ['id' => 1], // Data hanya satu baris, bisa gunakan id yang tetap
-            $validated
+            ['id' => 1], // Identifikasi baris yang akan diperbarui atau dibuat
+            $data // Data yang telah divalidasi
         );
-
-        return redirect()->route('admin.content.index')->with('success', 'Content created successfully.');
+        
+        // Redirect ke halaman yang diinginkan dengan pesan sukses
+        return redirect()->route('admin.content.index')->with('success', 'Konten berhasil diperbarui!');
+        
     }
 
     /**
