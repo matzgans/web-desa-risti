@@ -104,10 +104,12 @@ class DocumentTidakMampuController extends Controller
         }
     }
 
-    public function print($id)
+    public function print($id, Request $request)
     {
         $document = Document::where('id', $id)->firstOrFail();
-        $kepala_desa = Structure::where('position', "Kepala Desa Menjabat")->first();
+        $kepala_desa = Structure::where('position', "Kepala Desa")->first();
+        $sekretaris_desa = Structure::where('position', "Sekretaris")->first();
+        $tandatangan = $request->query('tandatangan');
 
 
         if ($document->no_surat) {
@@ -115,6 +117,8 @@ class DocumentTidakMampuController extends Controller
             $data = json_decode($document->data, true);
             $data['kepala_desa'] = $kepala_desa->staff_name;
             $data['kepala_desa_position'] = $kepala_desa->position;
+            $data['sekretaris_desa'] = $sekretaris_desa->staff_name;
+            $data['tandatangan'] = $tandatangan;
             $data['nip'] = $kepala_desa->nip;
             $pdf = Pdf::loadView('pdf.surat-keterangan-tidakmampu', $data);
             $fileName = 'surat_keterangan_tidakmampu_' . htmlspecialchars($data['name']) . '.pdf';
