@@ -104,8 +104,8 @@
                             class="-mx-1.5 -my-1.5 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-900 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white"
                             data-dismiss-target="#toast-danger" type="button" aria-label="Close">
                             <span class="sr-only">Close</span>
-                            <svg class="h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 14 14">
+                            <svg class="h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 14 14">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                             </svg>
@@ -113,8 +113,8 @@
                     </div>
                 @endif
                 <div class="mb-2 flex flex-col items-center sm:flex-row">
-                    <form class="mb-2 w-full sm:mb-0 sm:me-2" action="{{ route('admin.document.beda-tanggal.index') }}"
-                        method="GET">
+                    <form class="mb-2 w-full sm:mb-0 sm:me-2"
+                        action="{{ route('admin.document.beda-tanggal.index') }}" method="GET">
                         <label class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
                             for="default-search">Search</label>
                         <div class="relative">
@@ -135,7 +135,7 @@
                         </div>
                     </form>
 
-                    <a class="mb-2 w-full rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 sm:mb-0 sm:me-2 sm:w-auto"
+                    <a class="mb-2 w-full rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 sm:mb-0 sm:me-2 sm:w-auto dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                         href="{{ route('documents.index') }}">
                         <svg class="mx-auto h-6 w-6 text-white dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -184,6 +184,7 @@
                                         @endif
                                     </td>
                                     <td class="border border-gray-300 px-6 py-4">
+
                                         <div class="flex items-center">
                                             <a
                                                 href="{{ route('admin.document.beda-tanggal.edit', $document['id']) }}">
@@ -214,20 +215,23 @@
                                                 </svg>
                                             </a>
 
-                                            <form id="delete-form-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.beda-tanggal.destroy', ['beda_tanggal' => $document['id']]) }}"
-                                                method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
-
                                             <form id="print-form-{{ $document['id'] }}" style="display: none;"
                                                 action="{{ route('admin.document.beda-tanggal.print', ['id' => $document['id']]) }}"
-                                                method="GET">
+                                                method="GET" target="blank">
                                                 @csrf
                                                 @method('GET')
+                                                <input name="tandatangan" type="hidden" value="kades">
+                                            </form>
+
+                                            <form id="print-form-sekdes-{{ $document['id'] }}" style="display: none;"
+                                                action="{{ route('admin.document.beda-tanggal.print', ['id' => $document['id']]) }}"
+                                                method="GET" target="blank">
+                                                @csrf
+                                                @method('GET')
+                                                {{-- <input type="hidden" name="tandatangan" value="kades"> --}}
                                             </form>
                                         </div>
+                                        {{-- perubahan --}}
                                     </td>
                                 </tr>
                             @empty
@@ -266,16 +270,24 @@
 
                 function confirmPrint(itemId, itemName) {
                     Swal.fire({
-                        title: 'Are you sure?',
-                        text: "Kamu akan Print data  " + itemName,
+                        title: 'Print data ' + itemName,
+                        text: "Pilih tipe print",
                         icon: 'info',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        confirmButtonText: 'Ya'
+                        confirmButtonText: 'Tanda Tangan Kades',
+                        cancelButtonText: 'Batal',
+                        showDenyButton: true,
+                        denyButtonText: 'Tanda Tangan Sekretaris',
+                        denyButtonColor: '#3085d6'
                     }).then((result) => {
                         if (result.isConfirmed) {
                             document.getElementById('print-form-' + itemId).submit();
+                        } else if (result.isDenied) {
+                            document.getElementById('print-form-sekdes-' + itemId).submit();
+                        } else {
+                            document.getElementById('print-excel-form-' + itemId).submit();
                         }
                     });
                 }
