@@ -109,9 +109,12 @@
             <!-- Image Section -->
             <div class="w-full md:w-1/3">
                 {{-- {{ $kepala_desa }} --}}
-                @if($kepala_desa->staff_photo == null)
-                <img class="w-full rounded-lg object-cover shadow-lg"
-                    src="{{ asset('structure/staff_profile/' . $kepala_desa->staff_photo) }}" alt="Kepala Desa">
+                @if ($kepala_desa->staff_photo == null)
+                    <img class="w-full rounded-lg object-cover shadow-lg"
+                        src="{{ asset('structure/staff_profile/' . $kepala_desa->staff_photo) }}" alt="Kepala Desa">
+                @else
+                    <img class="w-full rounded-lg object-cover shadow-lg"
+                        src="{{ asset('structure/staff_profile/' . $kepala_desa->staff_photo) }}" alt="Kepala Desa">
                 @endif
             </div>
 
