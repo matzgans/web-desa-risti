@@ -42,7 +42,7 @@ class LandingController extends Controller
       
       return view("pages.landing.index", compact(
             "articles",
-        'galleries',
+            "galleries",
             'kepala_desa',
             "currentVillageHead",
             "employees",
