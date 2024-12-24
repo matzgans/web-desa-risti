@@ -135,7 +135,7 @@ class StructureController extends Controller
 
         // Cari data berdasarkan UUID
         $structure = Structure::where('uuid', $uuid)->firstOrFail();
-        dd($structure);
+        // dd($structure);
 
         // Validasi input
         $validator = Validator::make($request->all(), [
