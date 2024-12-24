@@ -8,6 +8,7 @@ use App\Models\Content;
 use App\Models\Village;
 use App\Models\Resident;
 use App\Models\Structure;
+use App\Models\Gallery;
 use App\Models\VisionMision;
 use Illuminate\Http\Request;
 use App\Models\EducationLevel;
@@ -24,6 +25,7 @@ class LandingController extends Controller
     {
 
         $articles = Article::where("is_show", "=", 1)->limit(4)->get();
+        $galleries = Gallery::limit(8)->get();
         $currentVillageHead = Structure::where("position", "=", "Kepala Desa Menjabat")->limit(1)->get();
         $employees = Structure::whereNotIn('position', ['Kepala Desa Menjabat', 'Kepala Desa Lama'])->get();
         $kepala_desa_menjabat = Structure::where("position", "=", "Kepala Desa Menjabat")->first();
@@ -41,6 +43,7 @@ class LandingController extends Controller
 
         return view("pages.landing.index", compact(
             "articles",
+            'galleries',
             'kepala_desa_menjabat',
             "currentVillageHead",
             "employees",
