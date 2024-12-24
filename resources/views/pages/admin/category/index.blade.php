@@ -138,7 +138,7 @@
                     </form>
 
                     <button
-                        class="mb-2 w-full rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 sm:mb-0 sm:me-2 sm:w-auto"
+                        class="mb-2 w-full rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 sm:mb-0 sm:me-2 sm:w-auto dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                         data-modal-target="crud-modal" data-modal-toggle="crud-modal" type='button'>
                         <svg class="mx-auto h-6 w-6 text-white dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -184,7 +184,7 @@
                                     </td>
                                     <td class="border border-gray-300 px-6 py-4">
                                         <div class="flex items-center">
-                                            @if ($staffcategory->category !== 'Kepala Desa Lama' && $staffcategory->category !== 'Kepala Desa Menjabat')
+                                            @if ($staffcategory->category !== 'Kepala Desa Lama' && $staffcategory->category !== 'Kepala Desa')
                                                 <!-- Tombol Edit Kategori -->
                                                 <a class="edit-category" data-modal-target="crud-modal-edit"
                                                     data-modal-toggle="crud-modal-edit"
@@ -236,7 +236,7 @@
                 <!-- Modal content -->
                 <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
                     <!-- Modal header -->
-                    <div class="flex items-center justify-between rounded-t border-b p-4 dark:border-gray-600 md:p-5">
+                    <div class="flex items-center justify-between rounded-t border-b p-4 md:p-5 dark:border-gray-600">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                             Tambah Kategori
                         </h3>
@@ -286,7 +286,7 @@
                 <!-- Modal content -->
                 <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
                     <!-- Modal header -->
-                    <div class="flex items-center justify-between rounded-t border-b p-4 dark:border-gray-600 md:p-5">
+                    <div class="flex items-center justify-between rounded-t border-b p-4 md:p-5 dark:border-gray-600">
                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                             Edit Kategori
                         </h3>

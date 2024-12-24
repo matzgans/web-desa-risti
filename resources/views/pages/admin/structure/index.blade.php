@@ -112,7 +112,7 @@
                         </div>
                     </form>
 
-                    <a class="mb-2 w-full rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 sm:mb-0 sm:me-2 sm:w-auto"
+                    <a class="mb-2 w-full rounded-lg bg-green-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 sm:mb-0 sm:me-2 sm:w-auto dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                         href="{{ route('admin.structure.create') }}">
                         <svg class="mx-auto h-6 w-6 text-white dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
@@ -156,11 +156,6 @@
                                         scope="row">
                                         {{ ($structures->currentPage() - 1) * $structures->perPage() + $loop->iteration }}
                                     </th>
-                                    {{-- <td class="border border-gray-300 px-6 py-4">
-                                        <img class="h-20 w-20 object-cover"
-                                            src="{{ asset('structure/staff_profile/' . $structure->staff_photo) }}"
-                                            alt="">
-                                    </td> --}}
                                     <td class="border border-gray-300 px-6 py-4">
                                         <div class="flex flex-row items-center">
                                             <img class="mr-5 h-10 w-10 rounded-full object-cover"
@@ -179,7 +174,6 @@
 
                                     <td class="border border-gray-300 px-6 py-4">
                                         <div class="flex items-center">
-
                                             <a
                                                 href="{{ route('admin.structure.edit', ['structure' => $structure->uuid]) }}">
                                                 <svg class="size-6 text-yellow-500 dark:text-white" aria-hidden="true"

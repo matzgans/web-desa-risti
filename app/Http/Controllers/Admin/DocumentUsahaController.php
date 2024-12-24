@@ -107,10 +107,12 @@ class DocumentUsahaController extends Controller
         }
     }
 
-    public function print($id)
+    public function print($id, Request $request)
     {
         $document = Document::where('id', $id)->firstOrFail();
-        $kepala_desa = Structure::where('position', "Kepala Desa Menjabat")->first();
+        $kepala_desa = Structure::where('position', "Kepala Desa")->first();
+        $sekretaris_desa = Structure::where('position', "Sekretaris")->first();
+        $tandatangan = $request->query('tandatangan');
 
 
         if ($document->no_surat) {
@@ -118,6 +120,8 @@ class DocumentUsahaController extends Controller
             $data = json_decode($document->data, true);
             $data['kepala_desa'] = $kepala_desa->staff_name;
             $data['nip'] = $kepala_desa->nip;
+            $data['sekretaris_desa'] = $sekretaris_desa->staff_name;
+            $data['tandatangan'] = $tandatangan;
             $pdf = Pdf::loadView('pdf.surat-keterangan-usaha', $data);
             $fileName = 'surat_keterangan_usaha_' . htmlspecialchars($data['name']) . '.pdf';
             $document->update(['is_status' => 1]);

@@ -1,23 +1,23 @@
-<header class="sticky sm:fixed h-16 inset-0 z-50 border-b border-slate-100 bg-primary backdrop-blur-lg my-0 ">
+<header class="sticky sm:fixed h-16 inset-0 z-50 border-b border-slate-100 bg-primary backdrop-blur-lg my-0">
     <nav class="mx-auto flex max-w-6xl gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-3">
         <div class="relative flex items-center">
             <a href="/">
                 <img src="{{ asset('landing/images/logo-gorut.png') }}" loading="lazy" style="color:transparent"
-                    width="32" height="32">
+                    width="32" height="32" class="transition-transform duration-200 hover:scale-105">
             </a>
         </div>
         <!-- Menu untuk Desktop -->
         <ul class="hidden items-center justify-center gap-6 md:flex">
-            <li class="pt-1.5 font-dm text-sm font-medium text-white">
+            <li class="pt-1.5 font-dm text-sm font-medium text-white transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('landing.profile') }}">Profil Desa</a>
             </li>
-            <li class="pt-1.5 font-dm text-sm font-medium text-white">
+            <li class="pt-1.5 font-dm text-sm font-medium text-white transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('landing.article') }}">Artikel Desa</a>
             </li>
-            <li class="pt-1.5 font-dm text-sm font-medium text-white">
+            <li class="pt-1.5 font-dm text-sm font-medium text-white transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('landing.data') }}">Data Statistik Desa</a>
             </li>
-            <li class="pt-1.5 font-dm text-sm font-medium text-white">
+            <li class="pt-1.5 font-dm text-sm font-medium text-white transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('documents.index') }}">Penyuratan</a>
             </li>
         </ul>
@@ -25,13 +25,13 @@
         <!-- Tombol Login untuk Desktop -->
         <div class="hidden items-center justify-center gap-6 md:flex">
             <a href="{{ route('login') }}"
-                class="rounded-md bg-gradient-to-br bg-secondary px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md  transition-transform duration-200 ease-in-out hover:scale-[1.03]">
+                class="rounded-md bg-gradient-to-br bg-secondary px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg">
                 Login
             </a>
         </div>
         <!-- Tombol Menu untuk Mobile -->
         <div class="relative flex items-center justify-center md:hidden">
-            <button type="button" id="mobile-menu-toggle">
+            <button type="button" id="mobile-menu-toggle" class="transition-transform duration-200 hover:scale-105">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" aria-hidden="true" class="h-6 w-auto text-white">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -43,32 +43,31 @@
     <!-- Menu Dropdown untuk Mobile -->
     <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-gray-800 text-white md:hidden">
         <ul class="flex flex-col gap-4 p-4">
-            <li class="pt-1.5 font-dm text-sm font-medium">
+            <li class="pt-1.5 font-dm text-sm font-medium transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('landing.profile') }}">Profil Desa</a>
             </li>
-            <li class="pt-1.5 font-dm text-sm font-medium">
+            <li class="pt-1.5 font-dm text-sm font-medium transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('landing.article') }}">Artikel Desa</a>
             </li>
-            <li class="pt-1.5 font-dm text-sm font-medium">
+            <li class="pt-1.5 font-dm text-sm font-medium transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('landing.data') }}">Data Statistik Desa</a>
             </li>
-            <li class="pt-1.5 font-dm text-sm font-medium">
+            <li class="pt-1.5 font-dm text-sm font-medium transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('documents.index') }}">Penyuratan</a>
             </li>
-            <li class="pt-1.5 font-dm text-sm font-medium">
+            <li class="pt-1.5 font-dm text-sm font-medium transition-colors duration-200 hover:text-secondary">
                 <a href="{{ route('login') }}">Login</a>
             </li>
         </ul>
     </div>
-
 </header>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const toggleButton = document.getElementById("mobile-menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
 
-        toggleButton.addEventListener("click", function() {
+        toggleButton.addEventListener("click", function () {
             mobileMenu.classList.toggle("hidden");
         });
     });

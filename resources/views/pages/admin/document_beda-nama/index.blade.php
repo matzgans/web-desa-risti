@@ -220,9 +220,20 @@
 
                                             <form id="print-form-{{ $document['id'] }}" style="display: none;"
                                                 action="{{ route('admin.document.beda-nama.print', ['id' => $document['id']]) }}"
-                                                method="GET">
+                                                method="GET"
+                                                target="blank">
                                                 @csrf
                                                 @method('GET')
+                                                <input type="hidden" name="tandatangan" value="kades">
+                                            </form>
+
+                                            <form id="print-form-sekdes-{{ $document['id'] }}" style="display: none;"
+                                                action="{{ route('admin.document.beda-nama.print', ['id' => $document['id']]) }}"
+                                                method="GET"
+                                                target="blank">
+                                                @csrf
+                                                @method('GET')
+                                                {{-- <input type="hidden" name="tandatangan" value="kades"> --}}
                                             </form>
                                         </div>
                                     </td>
@@ -263,16 +274,24 @@
 
                 function confirmPrint(itemId, itemName) {
                     Swal.fire({
-                        title: 'Are you sure?',
-                        text: "Kamu akan Print data  " + itemName,
+                        title: 'Print data ' + itemName,
+                        text: "Pilih tipe print",
                         icon: 'info',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',
                         cancelButtonColor: '#d33',
-                        confirmButtonText: 'Ya'
+                        confirmButtonText: 'Tanda Tangan Kades',
+                        cancelButtonText: 'Batal',
+                        showDenyButton: true,
+                        denyButtonText: 'Tanda Tangan Sekretaris',
+                        denyButtonColor: '#3085d6'
                     }).then((result) => {
                         if (result.isConfirmed) {
                             document.getElementById('print-form-' + itemId).submit();
+                        } else if (result.isDenied) {
+                            document.getElementById('print-form-sekdes-' + itemId).submit();
+                        } else {
+                            document.getElementById('print-excel-form-' + itemId).submit();
                         }
                     });
                 }

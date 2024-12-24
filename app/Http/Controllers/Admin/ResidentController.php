@@ -58,7 +58,7 @@ class ResidentController extends Controller
      */
     public function store(Request $request)
     {
-        // Validasi input
+       // Validasi input
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255|min:6',
             'village_id' => 'required|string|max:255',
@@ -68,7 +68,7 @@ class ResidentController extends Controller
             'occupation' => 'required|string|max:255|min:6',
             'education_level' => 'required|string|max:255',
             'status_resident' => 'required|string|max:255',
-            'photo_profile' => 'required|image|mimes:jpeg,jpg,png|max:2048', // Mendukung 3 tipe file
+            'photo_profile' => 'nullable|image|mimes:jpeg,jpg,png|max:2048', // Nullable untuk file
         ]);
 
         // Jika validasi gagal, kembali dengan pesan kesalahan
@@ -76,26 +76,30 @@ class ResidentController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        // Cek jika ada gambar dengan nama yang sama dan hapus jika ada
+        // Inisialisasi variabel fileName dengan nilai default null
+        $fileName = "default-profile.jpg";
+
+        // Cek jika ada file yang diunggah
         if ($request->hasFile('photo_profile')) {
+            // Cek jika ada gambar dengan nama yang sama dan hapus jika ada
             $imageName = $request->file('photo_profile')->getClientOriginalName();
             $imagePath = public_path('residents/images/' . $imageName);
             if (file_exists($imagePath)) {
                 unlink($imagePath); // Hapus gambar yang ada
             }
+
+            // Generate UUID untuk nama file
+            $uuid = Str::uuid()->toString();
+            $fileExtension = $request->file('photo_profile')->getClientOriginalExtension();
+            $fileName = $uuid . '.' . $fileExtension;
+
+            // Simpan gambar ke folder publik
+            $request->file('photo_profile')->move(public_path('residents/images'), $fileName);
         }
-
-        // Generate UUID untuk penduduk baru
-        $uuid = Str::uuid()->toString();
-
-        // Simpan gambar di folder publik dengan nama file yang sesuai
-        $fileExtension = $request->file('photo_profile')->getClientOriginalExtension();
-        $fileName = $uuid . '.' . $fileExtension; // Path tanpa prefix folder
-        $request->file('photo_profile')->move(public_path('residents/images'), $fileName); // Simpan gambar ke folder
 
         // Membuat instance model dan menyimpan data
         $resident = new Resident();
-        $resident->uuid = $uuid; // Menyimpan UUID
+        $resident->uuid = Str::uuid()->toString(); // Generate UUID baru
         $resident->name = $request->name;
         $resident->village_id = $request->village_id;
         $resident->nik = $request->nik;
@@ -104,13 +108,14 @@ class ResidentController extends Controller
         $resident->occupation = $request->occupation;
         $resident->education_level = $request->education_level;
         $resident->status_resident = $request->status_resident;
-        $resident->photo_profile = $fileName;
+        $resident->photo_profile = $fileName; // Tetap null jika tidak ada file
 
         // Simpan data ke database
         $resident->save();
 
         // Kembali ke halaman sebelumnya dengan pesan sukses
         return redirect()->back()->with('success', 'Data penduduk berhasil ditambahkan!');
+
     }
 
     /**

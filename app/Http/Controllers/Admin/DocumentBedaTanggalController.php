@@ -136,16 +136,20 @@ class DocumentBedaTanggalController extends Controller
         }
     }
 
-    public function print($id)
+    public function print($id, Request $request)
     {
         $document = Document::where('id', $id)->firstOrFail();
-        $kepala_desa = Structure::where('position', "Kepala Desa Menjabat")->first();
+        $kepala_desa = Structure::where('position', "Kepala Desa")->first();
+        $sekretaris_desa = Structure::where('position', "Sekretaris")->first();
+        $tandatangan = $request->query('tandatangan');
 
 
         if ($document->no_surat) {
             $data = json_decode($document->data, true);
             $data['kepala_desa'] = $kepala_desa->staff_name;
+            $data['sekretaris_desa'] = $sekretaris_desa->staff_name;
             $data['nip'] = $kepala_desa->nip;
+            $data['tandatangan'] = $tandatangan;
             $pdf = Pdf::loadView('pdf.surat-keterangan-beda-tanggal', $data);
             $fileName = 'surat_keterangan_beda-tanggal' . htmlspecialchars($data['name']) . '.pdf';
             $document->update(['is_status' => 1]);
