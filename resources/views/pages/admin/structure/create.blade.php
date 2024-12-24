@@ -170,7 +170,7 @@
                                             800x400px)</p>
                                     </div>
                                     <input class="hidden" id="dropzone-file" name="staff_photo" type="file"
-                                        accept="image/*" onchange="previewImage(event)" required />
+                                        accept="image/*" onchange="previewImage(event)" />
 
 
                                     @error('staff_photo')
