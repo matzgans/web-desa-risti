@@ -43,10 +43,10 @@ class StructureController extends Controller
      */
     public function store(Request $request)
     {
-
+        // dd('aku ganteng');
         // Validasi input
         $validator = Validator::make($request->all(), [
-            'staff_name' => 'required|string|max:255|min:6',
+            'staff_name' => 'required|string|max:255',
             'staff_description' => 'required|string|max:255|min:1',
             'position' => [
                 'required',
@@ -65,8 +65,8 @@ class StructureController extends Controller
                 //     }
                 // },
             ],
-            'staff_photo' => 'required|image|mimes:jpg,jpeg,png|max:2048',
-            'nip' => 'nullable|numeric|digits:18|unique:residents,nik,' // Mendukung file PNG dengan maksimal ukuran 2MB
+            // 'staff_photo' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'nip' => 'nullable|numeric|unique:residents,nik,' // Mendukung file PNG dengan maksimal ukuran 2MB
         ]);
 
         // Jika validasi gagal, kembali dengan pesan kesalahan
@@ -74,7 +74,8 @@ class StructureController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-
+        $fileName = "kepala-desa.png";
+        // dd($request->hasFile('staff_photo'));
         // Cek jika ada gambar dengan nama yang sama dan hapus jika ada
         if ($request->hasFile('staff_photo')) {
             $imageName = $request->file('staff_photo')->getClientOriginalName();
@@ -87,10 +88,10 @@ class StructureController extends Controller
         // Generate UUID untuk penduduk baru
         $uuid = Str::uuid()->toString();
 
-        // Simpan gambar di folder publik dengan nama file yang sesuai
-        $fileExtension = $request->file('staff_photo')->getClientOriginalExtension();
-        $fileName = $uuid . '.' . $fileExtension; // Path tanpa prefix folder
-        $request->file('staff_photo')->move(public_path('structure/staff_profile'), $fileName); // Simpan gambar ke folder
+        // // Simpan gambar di folder publik dengan nama file yang sesuai
+        // $fileExtension = $request->file('staff_photo')->getClientOriginalExtension();
+        // $fileName = $uuid . '.' . $fileExtension; // Path tanpa prefix folder
+        // $request->file('staff_photo')->move(public_path('structure/staff_profile'), $fileName); // Simpan gambar ke folder
 
         // Membuat instance model dan menyimpan data
         $structure = new Structure();
