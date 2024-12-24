@@ -13,7 +13,7 @@ class CategoryStaffSeeder extends Seeder
      */
     public function run(): void
     {
-        $categories = ["Kepala Desa Lama", "Bendahara", "Sekretaris", "Kepala Desa Menjabat"];
+        $categories = ["Bendahara", "Sekretaris", "Kepala Desa"];
         foreach ($categories as $category) {
             CategoryStaff::create([
                 'category' => $category,

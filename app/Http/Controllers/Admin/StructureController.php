@@ -99,7 +99,7 @@ class StructureController extends Controller
         $structure->staff_description = $request->staff_description;
         $structure->position = $request->position;
         $structure->staff_photo = $fileName;
-        $structure->nip = $request -> nip;
+        $structure->nip = $request->nip;
 
         // Simpan data ke database
         $structure->save();
@@ -135,7 +135,7 @@ class StructureController extends Controller
         // Cari data berdasarkan UUID
         $structure = Structure::where('uuid', $uuid)->firstOrFail();
         // dd($structure);
-        
+
         // Validasi input
         $validator = Validator::make($request->all(), [
             'staff_name' => 'required|string|max:255|min:6',
