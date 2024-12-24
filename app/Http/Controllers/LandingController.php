@@ -24,9 +24,9 @@ class LandingController extends Controller
     {
 
         $articles = Article::where("is_show", "=", 1)->limit(4)->get();
-        $currentVillageHead = Structure::where("position", "=", "Kepala Desa Menjabat")->limit(1)->get();
-        $employees = Structure::whereNotIn('position', ['Kepala Desa Menjabat', 'Kepala Desa Lama'])->get();
-        $kepala_desa_menjabat = Structure::where("position", "=", "Kepala Desa Menjabat")->first();
+        $currentVillageHead = Structure::where("position", "=", "Kepala Desa")->limit(1)->get();
+        $employees = Structure::whereNotIn('position', ['Kepala Desa', 'Kepala Desa Lama'])->get();
+        $kepala_desa = Structure::where("position", "=", "Kepala Desa")->first();
         $recomendationArticles = Article::inRandomOrder()
             ->take(3)
             ->get();
@@ -41,7 +41,7 @@ class LandingController extends Controller
 
         return view("pages.landing.index", compact(
             "articles",
-            'kepala_desa_menjabat',
+            'kepala_desa',
             "currentVillageHead",
             "employees",
             "recomendationArticles",
@@ -55,8 +55,8 @@ class LandingController extends Controller
 
     public function profile()
     {
-        $currentVillageHead = Structure::where("position", "=", "Kepala Desa Menjabat")->limit(1)->get();
-        $employees = Structure::whereNotIn('position', ['Kepala Desa Menjabat', 'Kepala Desa Lama'])->get();
+        $currentVillageHead = Structure::where("position", "=", "Kepala Desa")->limit(1)->get();
+        $employees = Structure::whereNotIn('position', ['Kepala Desa', 'Kepala Desa Lama'])->get();
         $formerVillageHeads = Structure::where("position", "=", "Kepala Desa Lama")->get();
 
 

@@ -109,8 +109,7 @@
             <!-- Image Section -->
             <div class="w-full md:w-1/3">
                 <img class="w-full rounded-lg object-cover shadow-lg"
-                    src="{{ asset('structure/staff_profile/' . $kepala_desa_menjabat->staff_photo) }}"
-                    alt="Kepala Desa">
+                    src="{{ asset('structure/staff_profile/' . $kepala_desa->staff_photo) }}" alt="Kepala Desa">
             </div>
 
             <!-- Content Section -->
