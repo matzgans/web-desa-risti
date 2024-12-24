@@ -36,6 +36,7 @@ use App\Http\Controllers\Admin\DocumentTidakMampuController;
 use App\Http\Controllers\Admin\TransportationMeanController;
 use App\Http\Controllers\Admin\DocumentBedaTanggalController;
 use App\Http\Controllers\Admin\DocumentKondisiSosialController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\ArticleController as LandingArticleController;
 
 Route::get('/', [LandingController::class, 'index'])->name('landing.index');
@@ -239,6 +240,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::get('export/template/resident', [ResidentController::class, 'export_template'])->name('export.template.resident');
     Route::post('import/template/resident', [ResidentController::class, 'import_template'])->name('import.template.resident');
     Route::resource('article', ArticleController::class);
+    Route::resource('gallery', GalleryController::class);
     Route::put('update/article/status/{article}', [ArticleController::class, 'update_status'])->name('update.article.status');
     Route::resource('structure', StructureController::class);
 });

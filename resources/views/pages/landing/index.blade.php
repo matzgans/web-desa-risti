@@ -404,66 +404,13 @@
 
     <!-- component -->
     <div class="container mx-auto p-4">
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-            <div class="grid gap-4">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+            @foreach ($galleries as $i)
                 <div>
-                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-1.jpeg') }}"
+                    <img class="h-auto max-w-full rounded-lg border" src="{{ asset('gallery/thumb/' . $i->image) }}"
                         alt="" loading="lazy" />
                 </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-2.jpeg') }}"
-                        alt="" loading="lazy" />
-                </div>
-                {{-- <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="https://pbs.twimg.com/media/FGRnNpAVUAYqRYv?format=jpg&name=large" alt="" />
-                </div> --}}
-            </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-4.jpeg') }}"
-                        alt="" loading="lazy" />
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-7.jpeg') }}"
-                        alt="" loading="lazy" />
-                </div>
-                {{-- <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Benares-_The_Golden_Temple%2C_India%2C_ca._1915_%28IMP-CSCNWW33-OS14-66%29.jpg/1280px-Benares-_The_Golden_Temple%2C_India%2C_ca._1915_%28IMP-CSCNWW33-OS14-66%29.jpg"
-                        alt="" />
-                </div> --}}
-            </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-3.jpeg') }}"
-                        alt="" loading="lazy" />
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-5.jpeg') }}"
-                        alt="" loading="lazy" />
-                </div>
-                {{-- <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="https://staticimg.amarujala.com/assets/images/2021/11/07/750x506/kashi-vishwanath-dham_1636258507.jpeg?w=674&dpr=1.0"
-                        alt="" />
-                </div> --}}
-            </div>
-            <div class="grid gap-4">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-6.jpeg') }}"
-                        alt="" loading="lazy" />
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="{{ asset('landing/images/galery-2.jpeg') }}"
-                        alt="" loading="lazy" />
-                </div>
-                {{-- <div>
-                    <img class="h-auto max-w-full rounded-lg" loading="lazy"
-                        src="https://upload.wikimedia.org/wikipedia/commons/2/25/Chet_Singh_Ghat_in_Varanasi.jpg"
-                        alt="" />
-                </div> --}}
-            </div>
+            @endforeach
         </div>
     </div>
 
