@@ -142,7 +142,7 @@
                             <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white" for="nip">NIP</label>
                             <input
                                 class="block w-full rounded-lg border border-secondary bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-secondary dark:border-secondary dark:bg-gray-700 dark:text-white"
-                                id="nip" name="nip" type="text" value="{{ old('nip') }}" placeholder="1234567890" required />
+                                id="nip" name="nip" type="text" value="{{ old('nip') }}" placeholder="1234567890"/>
                             @error('nip')
                                 <span class="text-sm text-red-500">{{ $message }}</span>
                             @enderror
