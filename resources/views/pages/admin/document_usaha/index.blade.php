@@ -221,18 +221,37 @@
                                             </a>
 
                                             <form id="delete-form-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.usaha.destroy', ['usaha' => $document['id']]) }}"
-                                                method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
+                                            action="{{ route('admin.document.usaha.destroy', ['usaha' => $document['id']]) }}"
+                                            method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
 
-                                            <form id="print-form-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.usaha.print', ['id' => $document['id']]) }}"
-                                                method="GET">
-                                                @csrf
-                                                @method('GET')
-                                            </form>
+                                        <form id="print-form-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.usaha.print', ['id' => $document['id']]) }}"
+                                            method="GET"
+                                            target="blank">
+                                            @csrf
+                                            @method('GET')
+                                            <input type="hidden" name="tandatangan" value="kades">
+                                        </form>
+
+                                        <form id="print-form-sekdes-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.usaha.print', ['id' => $document['id']]) }}"
+                                            method="GET"
+                                            target="blank">
+                                            @csrf
+                                            @method('GET')
+                                            {{-- <input type="hidden" name="tandatangan" value="kades"> --}}
+                                        </form>
+
+
+                                           
+                                         
+
+                                           
+
+                                           
                                         </div>
                                     </td>
                                 </tr>
@@ -252,46 +271,46 @@
             </div>
         </div>
         @push('after-scripts')
-            <script>
-                function confirmDelete(itemId, itemName) {
-                    Swal.fire({
-                        title: 'Are you sure?',
-                        text: "Kamu akan mengapus " + itemName,
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes, delete it!'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            document.getElementById('delete-form-' + itemId).submit();
-                        }
-                    });
-                }
+        <script>
+            function confirmDelete(itemId, itemName) {
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "Kamu akan mengapus " + itemName,
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.getElementById('delete-form-' + itemId).submit();
+                    }
+                });
+            }
 
-                function confirmPrint(itemId, itemName) {
-                    Swal.fire({
-                        title: 'Print data ' + itemName,
-                        text: "Pilih tipe print",
-                        icon: 'info',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Tanda Tangan Kades',
-                        cancelButtonText: 'Batal',
-                        showDenyButton: true,
-                        denyButtonText: 'Tanda Tangan Sekretaris',
-                        denyButtonColor: '#3085d6'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            document.getElementById('print-form-' + itemId).submit();
-                        } else if (result.isDenied) {
-                            document.getElementById('print-form-sekdes-' + itemId).submit();
-                        } else {
-                            document.getElementById('print-excel-form-' + itemId).submit();
-                        }
-                    });
-                }
-            </script>
-        @endpush
+            function confirmPrint(itemId, itemName) {
+                Swal.fire({
+                    title: 'Print data ' + itemName,
+                    text: "Pilih tipe print",
+                    icon: 'info',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Tanda Tangan Kades',
+                    cancelButtonText: 'Batal',
+                    showDenyButton: true,
+                    denyButtonText: 'Tanda Tangan Sekretaris',
+                    denyButtonColor: '#3085d6'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.getElementById('print-form-' + itemId).submit();
+                    } else if (result.isDenied) {
+                        document.getElementById('print-form-sekdes-' + itemId).submit();
+                    } else {
+                        document.getElementById('print-excel-form-' + itemId).submit();
+                    }
+                });
+            }
+        </script>
+         @endpush
 </x-app-layout>

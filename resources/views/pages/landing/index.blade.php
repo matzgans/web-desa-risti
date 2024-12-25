@@ -6,8 +6,17 @@
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div class="flex h-full flex-col items-center md:flex-row">
                     <!-- Image -->
-                    <img class="block h-1/2 w-full object-contain md:h-full md:w-1/2 md:object-cover"
-                        src="{{ asset('landing/images/kepala-desa.png') }}" alt="...">
+                    {{-- <img class="block h-1/2 w-full object-contain md:h-full md:w-1/2 md:object-cover"
+                        src="{{ asset('landing/images/kepala-desa.png') }}" alt="..."> --}}
+                    @if ($kepala_desa->staff_photo == null)
+                        <img class="block h-1/2 w-full object-contain md:h-full md:w-1/2 md:object-cover"
+                            src="{{ asset('structure/staff_profile/' . $kepala_desa->staff_photo) }}" alt="Kepala Desa">
+                    @else
+                        <img class="block h-1/2 w-full object-contain md:h-full md:w-1/2 md:object-cover"
+                            src="{{ asset('structure/staff_profile/' . $kepala_desa->staff_photo) }}" alt="Kepala Desa">
+                    @endif
+
+                        
                     <!-- Text Content -->
                     <div class="w-full bg-gray-200/50 p-4 md:w-1/2 md:p-8">
                         <h1

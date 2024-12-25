@@ -138,7 +138,7 @@
                     <tr>
                         <td style="padding-right: 50px">Nama Lengkap</td>
                         <td>:</td>
-                        <td>MARTEN H. SALEH</td>
+                        <td>{{ ucfirst($kepala_desa) }}</td>
                     </tr>
                     <tr>
                         <td style="padding-right: 50px">Jabatan</td>
