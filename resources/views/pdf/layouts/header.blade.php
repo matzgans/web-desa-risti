@@ -6,6 +6,6 @@
         <h2>Pemerintah Kabupaten Gorontalo Utara</h2>
         <h2>Kecamatan Kwandang</h2>
         <h2>Desa Katialada</h2>
-        <p>Jalan Trans Sulawesi No. 01 Desa Katialada Kecamatan Kwandang, Kode Pos 96252</p>
+        <p>Jl. Pelabuhan Kwandang Desa Katialada Kecamatan Kwandang, Kode Pos 96252</p>
     </div>
 </div>
