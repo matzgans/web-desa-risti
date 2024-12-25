@@ -115,7 +115,7 @@ class ArticleController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255|min:5',
             'content' => 'required|string|min:10',
-            'thumbnail' => 'nullable|image|mimes:png|max:2048',
+            'thumbnail' => 'nullable|image|mimes:png,jpg,jpeg|max:2048',
         ]);
 
         // Jika validasi gagal, kembali dengan pesan kesalahan
