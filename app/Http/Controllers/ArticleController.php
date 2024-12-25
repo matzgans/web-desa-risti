@@ -15,7 +15,7 @@ class ArticleController extends Controller
 
     public  function getBySlug(Request $request)
     {
-        $article = Article::where("slug", "=", $request->slug)->orWhere('is_show', 1)->first();
+        $article = Article::where("slug", "=", $request->slug)->first();    
         $recomendationArticles = Article::where("id", "!=", $article->id)
             ->where(function ($query) {
                 $query->orWhere('is_show', 1);
