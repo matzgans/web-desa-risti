@@ -117,7 +117,7 @@ class ArticleController extends Controller
             'content' => 'required|string|min:10',
             'thumbnail' => 'nullable|image|mimes:png,jpg,jpeg|max:2048',
         ]);
-
+        
         // Jika validasi gagal, kembali dengan pesan kesalahan
         if ($validator->fails()) {
             return redirect()->back()->with('error', "Perhatikan Inputan anda")->withErrors($validator)->withInput();
