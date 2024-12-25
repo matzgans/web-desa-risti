@@ -210,23 +210,34 @@
                                                 </svg>
                                             </a>
 
+                                        <form id="delete-form-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.tidakmampu.destroy', ['tidakmampu' => $document['id']]) }}"
+                                            method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
+
+                                        <form id="print-form-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.tidakmampu.print', ['id' => $document['id']]) }}"
+                                            method="GET"
+                                            target="blank">
+                                            @csrf
+                                            @method('GET')
+                                            <input type="hidden" name="tandatangan" value="kades">
+                                        </form>
+
+                                        <form id="print-form-sekdes-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.tidakmampu.print', ['id' => $document['id']]) }}"
+                                            method="GET"
+                                            target="blank">
+                                            @csrf
+                                            @method('GET')
+                                            {{-- <input type="hidden" name="tandatangan" value="kades"> --}}
+                                        </form>
 
 
-                                            <form id="print-form-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.tidakmampu.print', ['id' => $document['id']]) }}"
-                                                method="GET" target="blank">
-                                                @csrf
-                                                @method('GET')
-                                                <input name="tandatangan" type="hidden" value="kades">
-                                            </form>
 
-                                            <form id="print-form-sekdes-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.tidakmampu.print', ['id' => $document['id']]) }}"
-                                                method="GET" target="blank">
-                                                @csrf
-                                                @method('GET')
-                                                {{-- <input type="hidden" name="tandatangan" value="kades"> --}}
-                                            </form>
+                                          
                                         </div>
                                     </td>
                                 </tr>

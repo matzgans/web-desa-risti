@@ -218,19 +218,33 @@
                                                 </svg>
                                             </a>
 
-                                            <form id="delete-form-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.lahir.destroy', ['lahir' => $document['id']]) }}"
-                                                method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
+                                        <form id="delete-form-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.lahir.destroy', ['lahir' => $document['id']]) }}"
+                                            method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
 
-                                            <form id="print-form-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.lahir.print', ['id' => $document['id']]) }}"
-                                                method="GET">
-                                                @csrf
-                                                @method('GET')
-                                            </form>
+                                        <form id="print-form-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.lahir.print', ['id' => $document['id']]) }}"
+                                            method="GET"
+                                            target="blank">
+                                            @csrf
+                                            @method('GET')
+                                            <input type="hidden" name="tandatangan" value="kades">
+                                        </form>
+
+                                        <form id="print-form-sekdes-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.lahir.print', ['id' => $document['id']]) }}"
+                                            method="GET"
+                                            target="blank">
+                                            @csrf
+                                            @method('GET')
+                                            {{-- <input type="hidden" name="tandatangan" value="kades"> --}}
+                                        </form>
+
+
+
                                         </div>
                                     </td>
                                 </tr>

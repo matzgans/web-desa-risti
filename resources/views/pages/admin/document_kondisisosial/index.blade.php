@@ -235,18 +235,29 @@
                                             </a>
 
                                             <form id="delete-form-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.kondisi_sosial.destroy', ['kondisi_sosial' => $document['id']]) }}"
-                                                method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
+                                            action="{{ route('admin.document.kondisi_sosial.destroy', ['kondisi_sosial' => $document['id']]) }}"
+                                            method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
 
-                                            <form id="print-form-{{ $document['id'] }}" style="display: none;"
-                                                action="{{ route('admin.document.kondisi_sosial.print', ['id' => $document['id']]) }}"
-                                                method="GET">
-                                                @csrf
-                                                @method('GET')
-                                            </form>
+                                        <form id="print-form-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.kondisi_sosial.print', ['id' => $document['id']]) }}"
+                                            method="GET"
+                                            target="blank">
+                                            @csrf
+                                            @method('GET')
+                                            <input type="hidden" name="tandatangan" value="kades">
+                                        </form>
+
+                                        <form id="print-form-sekdes-{{ $document['id'] }}" style="display: none;"
+                                            action="{{ route('admin.document.kondisi_sosial.print', ['id' => $document['id']]) }}"
+                                            method="GET"
+                                            target="blank">
+                                            @csrf
+                                            @method('GET')
+                                            {{-- <input type="hidden" name="tandatangan" value="kades"> --}}
+                                        </form>
                                         </div>
                                     </td>
                                 </tr>

@@ -138,7 +138,7 @@
                     <tr>
                         <td style="padding-right: 50px">Nama Lengkap</td>
                         <td>:</td>
-                        <td>MARTEN H. SALEH</td>
+                        <td>{{ ucfirst($kepala_desa) }}</td>
                     </tr>
                     <tr>
                         <td style="padding-right: 50px">Jabatan</td>
@@ -215,13 +215,13 @@
                     <div class="text-table">
                         <p class="kepala-desa">Kepala Desa Katialada</p>
                         <p class="nama-kepala-desa">{{ ucfirst($kepala_desa) }}</p>
-                        <p class="nip">NIP: {{ $nip }}</p>
+                        {{-- <p class="nip">NIP: {{ $nip }}</p> --}}
                     </div>
                 @else
                     <div class="text-table">
                         <p class="kepala-desa">A.n Kepala Desa Katialada</p>
                         <p class="nama-kepala-desa">{{ ucfirst($sekretaris_desa) }}</p>
-                        <p class="nip">NIP: {{ $nip }}</p>
+                        {{-- <p class="nip">NIP: {{ $nip }}</p> --}}
                     </div>
                 @endif
             </div>
