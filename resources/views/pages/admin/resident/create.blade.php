@@ -125,10 +125,10 @@
                                 class="block w-full rounded-lg border border-secondary bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary focus:ring-secondary dark:border-secondary dark:bg-gray-700 dark:text-white"
                                 id="gender" name="gender" required>
                                 <option value="">Pilih Gender</option>
-                                <option value="Perempuan" {{ old('gender') == 'Perempuan' ? 'selected' : '' }}>Laki-laki
+                                <option value="Perempuan" {{ old('gender') == 'Perempuan' ? 'selected' : '' }}>Perempuan
                                 </option>
                                 <option value="Laki - Laki" {{ old('gender') == 'Laki - Laki' ? 'selected' : '' }}>
-                                    Perempuan
+                                    Laki-laki
                                 </option>
                             </select>
                             @error('gender')
