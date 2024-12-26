@@ -129,11 +129,11 @@
                                 id="gender" name="gender" required>
                                 <option value="">Pilih Gender</option>
                                 <option value="Perempuan"
-                                    {{ old('gender', $resident->gender) == 'Perempuan' ? 'selected' : '' }}>Laki-laki
+                                    {{ old('gender', $resident->gender) == 'Perempuan' ? 'selected' : '' }}>Perempuan
                                 </option>
                                 <option value="Laki - Laki"
                                     {{ old('gender', $resident->gender) == 'Laki - Laki' ? 'selected' : '' }}>
-                                    Perempuan
+                                    Laki-laki
                                 </option>
                             </select>
                             @error('gender')

@@ -119,7 +119,7 @@
             <h2>Pemerintah Kabupaten Bonebolango</h2>
             <h2>Kecamatan Kabila Bone</h2>
             <h2>Desa Katialada</h2>
-            <p>Jalan Trans Sulawesi No. 01 Desa Katialada Kecamatan Bonepantai, Kode Pos 96252</p>
+            <p>Jl. Pelabuhan Kwandang Desa Katialada Kecamatan Bonepantai, Kode Pos 96252</p>
         </div>
         <hr>
         <div class="content">
